@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>鎌倉 蟷螂 殿堂 — Kamakura Blade-Mantis Dojo</title>
+  <title>鎌倉 蟷螂 殿堂 — Kamakura Blade-Mantis Pavilion</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -57,20 +57,17 @@
         linear-gradient(to bottom, #12100e, #0c0a09);
     }
 
-    /* Monospace elements */
     .mono {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
     }
 
-    /* Form Controls & Inputs Safeguard */
     input, select, textarea, button {
-      font-size: 16px; /* Prevents iOS auto-zoom */
+      font-size: 16px;
       font-family: inherit;
       color: inherit;
       touch-action: manipulation;
     }
 
-    /* TOP HEADER & RESOURCE BAR */
     header {
       background: linear-gradient(180deg, #241d17 0%, #16120e 100%);
       border-bottom: 2px solid var(--border-wood);
@@ -151,7 +148,6 @@
       color: #fff;
     }
 
-    /* Resource Ledger Bar */
     .resource-ledger {
       display: flex;
       align-items: center;
@@ -178,7 +174,6 @@
     .res-pill.wax  { border-color: rgba(245, 158, 11, 0.35); color: #fde047; }
     .res-pill.day  { border-color: rgba(148, 163, 184, 0.35); color: #e2e8f0; }
 
-    /* DEV CONSOLE DRAWER */
     #devConsole {
       display: none;
       background: #0a0908;
@@ -220,7 +215,6 @@
       border-color: #7f1d1d;
     }
 
-    /* NAVIGATION TABS */
     nav.nav-tabs {
       display: flex;
       background: #15110d;
@@ -247,16 +241,13 @@
       align-items: center;
       gap: 6px;
     }
-    .tab-item:hover {
-      color: var(--parchment);
-    }
+    .tab-item:hover { color: var(--parchment); }
     .tab-item.active {
       color: var(--gold-primary);
       border-bottom-color: var(--gold-primary);
       background: linear-gradient(180deg, rgba(217, 119, 6, 0.08), rgba(217, 119, 6, 0.18));
     }
 
-    /* MAIN CONTAINER & SECTIONS */
     main {
       flex: 1;
       padding: 12px;
@@ -269,15 +260,12 @@
       display: none;
       animation: fadeIn 0.18s ease;
     }
-    .tab-content.active {
-      display: block;
-    }
+    .tab-content.active { display: block; }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(4px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* CARDS & PANELS */
     .panel {
       background: var(--bg-panel);
       border: 1px solid var(--border-wood);
@@ -328,9 +316,7 @@
       color: var(--gold-primary);
       transform: translateY(-1px);
     }
-    .btn:active:not(:disabled) {
-      transform: translateY(1px);
-    }
+    .btn:active:not(:disabled) { transform: translateY(1px); }
     .btn:disabled {
       opacity: 0.45;
       cursor: not-allowed;
@@ -356,7 +342,6 @@
       color: #fff;
     }
 
-    /* MANTIS ROSTER GRID */
     .roster-controls {
       display: flex;
       flex-wrap: wrap;
@@ -498,7 +483,6 @@
       font-weight: 700;
     }
 
-    /* IV Bars */
     .iv-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -557,7 +541,6 @@
       border-radius: 4px;
     }
 
-    /* DOSSIER MODAL */
     .modal-backdrop {
       position: fixed;
       inset: 0;
@@ -569,9 +552,7 @@
       justify-content: center;
       padding: 14px;
     }
-    .modal-backdrop.open {
-      display: flex;
-    }
+    .modal-backdrop.open { display: flex; }
     .modal-box {
       background: var(--bg-panel);
       border: 2px solid var(--border-gold);
@@ -595,16 +576,13 @@
       cursor: pointer;
     }
 
-    /* 5-SLOT BREEDING LAIR */
     .breeding-layout {
       display: grid;
       grid-template-columns: 1fr;
       gap: 14px;
     }
     @media (min-width: 880px) {
-      .breeding-layout {
-        grid-template-columns: 360px 1fr;
-      }
+      .breeding-layout { grid-template-columns: 360px 1fr; }
     }
 
     .pair-selection-panel {
@@ -632,7 +610,6 @@
       justify-content: space-between;
     }
 
-    /* Live Punnett Odds Display */
     .odds-container {
       background: #110e0b;
       border: 1px solid var(--border-wood);
@@ -665,7 +642,6 @@
       background: var(--gold-primary);
     }
 
-    /* 5 Nursery Slots Grid */
     .nursery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -709,53 +685,139 @@
       transition: width 0.3s ease;
     }
 
-    /* MICRO-ARENA COLOSSEUM */
+    /* STREAMLINED DOM-BASED DUEL THEATER */
     .arena-layout {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
-    .arena-canvas-wrap {
-      background: #090807;
-      border: 2px solid var(--border-wood-light);
-      border-radius: 8px;
-      overflow: hidden;
+    .arena-dom-theater {
+      background: linear-gradient(180deg, #18130e 0%, #0d0a08 100%);
+      border: 2px solid var(--border-wood);
+      border-radius: 10px;
+      padding: 14px;
+      box-shadow: inset 0 0 25px rgba(0,0,0,0.85);
       position: relative;
-      box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
-      width: 100%;
-      height: 240px;
+      overflow: hidden;
     }
-    #arenaCanvas {
-      width: 100%;
-      height: 100%;
-      display: block;
+    .duel-ring-stage {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
     }
-    .arena-overlay-hud {
-      position: absolute;
-      top: 8px;
-      left: 8px;
-      right: 8px;
+    @media (max-width: 600px) {
+      .duel-ring-stage {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+    }
+    .fighter-station {
+      background: rgba(28, 22, 17, 0.9);
+      border: 1.5px solid var(--border-wood-light);
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      position: relative;
+      transition: transform 0.1s ease, filter 0.1s ease;
+    }
+    .fighter-station.hit-shake {
+      animation: hitShake 0.22s cubic-bezier(.36,.07,.19,.97) both;
+    }
+    .fighter-station.hit-flash {
+      filter: brightness(2.2) drop-shadow(0 0 10px #ef4444);
+    }
+    .fighter-station.parry-flash {
+      filter: brightness(2.0) drop-shadow(0 0 10px #38bdf8);
+    }
+    @keyframes hitShake {
+      10%, 90% { transform: translate3d(-3px, 0, 0); }
+      30%, 70% { transform: translate3d(4px, 0, 0); }
+      50% { transform: translate3d(-4px, 0, 0); }
+    }
+
+    .fighter-badge-row {
       display: flex;
       justify-content: space-between;
-      pointer-events: none;
+      align-items: center;
+      font-size: 13px;
     }
-    .hud-fighter {
-      background: rgba(18, 14, 11, 0.85);
-      border: 1px solid var(--border-wood);
-      padding: 6px 10px;
+    .fighter-emblem {
+      font-size: 32px;
+      margin-right: 8px;
+    }
+    .fighter-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 4px;
+    }
+    .stat-bar-track {
+      height: 12px;
+      background: #140f0c;
       border-radius: 6px;
-      width: 45%;
-      pointer-events: auto;
-    }
-    .hud-hp-bar, .hud-sta-bar {
-      height: 6px;
-      background: #261f19;
-      border-radius: 3px;
+      border: 1px solid rgba(255,255,255,0.08);
       overflow: hidden;
-      margin-top: 3px;
+      position: relative;
     }
-    .hud-hp-fill { height: 100%; background: #ef4444; width: 100%; transition: width 0.2s ease; }
-    .hud-sta-fill { height: 100%; background: #06b6d4; width: 100%; transition: width 0.2s ease; }
+    .hp-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #dc2626, #ef4444);
+      width: 100%;
+      transition: width 0.18s ease-out;
+    }
+    .sta-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #0284c7, #06b6d4);
+      width: 100%;
+      transition: width 0.18s ease-out;
+    }
+    .stat-bar-label {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.9);
+      font-family: monospace;
+    }
+
+    .clash-divider {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+    }
+    .clash-vs-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #881337, #241c15);
+      border: 2px solid var(--gold-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 14px;
+      color: var(--gold-primary);
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+    }
+    .clash-burst-text {
+      font-family: monospace;
+      font-size: 11px;
+      color: var(--gold-accent);
+      margin-top: 4px;
+      font-weight: bold;
+      text-transform: uppercase;
+      min-height: 16px;
+    }
 
     .arena-controls-bar {
       display: flex;
@@ -792,21 +854,18 @@
       background: #0f0c0a;
       border: 1px solid var(--border-wood);
       border-radius: 6px;
-      height: 80px;
+      height: 110px;
       overflow-y: auto;
       padding: 6px 10px;
       font-family: monospace;
       font-size: 11px;
       color: var(--parchment-muted);
     }
-    .combat-log div {
-      line-height: 1.4;
-    }
+    .combat-log div { line-height: 1.45; }
     .log-crit { color: #f43f5e; font-weight: bold; }
     .log-parry { color: #38bdf8; font-weight: bold; }
     .log-win { color: #fbbf24; font-weight: bold; }
 
-    /* CONSIGNMENT AUCTION HOUSE */
     .auction-lanes-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
@@ -843,7 +902,6 @@
       color: var(--text-muted);
     }
 
-    /* 10-SECOND DISTRESSED CLEARANCE TAB */
     .clearance-banner {
       background: linear-gradient(90deg, #881337, #b45309);
       border: 1px solid var(--gold-primary);
@@ -867,7 +925,6 @@
       border: 1px solid var(--gold-primary);
     }
 
-    /* MYSTERY TRADE / WONDER TRADE */
     .trade-chamber {
       display: flex;
       flex-direction: column;
@@ -881,8 +938,8 @@
       gap: 16px;
     }
     .radar-circle {
-      width: 140px;
-      height: 140px;
+      width: 130px;
+      height: 130px;
       border: 2px solid var(--jade-primary);
       border-radius: 50%;
       position: relative;
@@ -898,7 +955,7 @@
       height: 100%;
       border-radius: 50%;
       border-top: 2px solid #34d399;
-      animation: sweepSpin 2s linear infinite;
+      animation: sweepSpin 1.8s linear infinite;
       display: none;
     }
     .radar-circle.scanning .radar-sweep { display: block; }
@@ -907,7 +964,6 @@
       to { transform: rotate(360deg); }
     }
 
-    /* CODEX & GRAILS */
     .codex-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -925,7 +981,6 @@
       background: linear-gradient(135deg, rgba(217, 119, 6, 0.15), #1a1510);
     }
 
-    /* FLOATING NOTIFICATION BANNER */
     #notifToast {
       position: fixed;
       bottom: max(20px, var(--safe-bottom));
@@ -946,21 +1001,18 @@
       align-items: center;
       gap: 8px;
     }
-    #notifToast.show {
-      transform: translateX(-50%) translateY(0);
-    }
+    #notifToast.show { transform: translateX(-50%) translateY(0); }
   </style>
 </head>
 <body>
 
-  <!-- TOP HEADER -->
   <header>
     <div class="header-top">
       <div class="brand">
         <div class="brand-crest">蟷</div>
         <div>
-          <div class="brand-title">Kamakura Blade-Mantis Dojo</div>
-          <div class="brand-subtitle">SENGOKU INSECT PAVILION</div>
+          <div class="brand-title">Kamakura Blade-Mantis Pavilion</div>
+          <div class="brand-subtitle">SAMURAI BREEDING & DUEL TYCOON</div>
         </div>
       </div>
       <div class="header-actions">
@@ -970,7 +1022,6 @@
       </div>
     </div>
 
-    <!-- RESOURCE LEDGER -->
     <div class="resource-ledger mono">
       <div class="res-pill gold" title="Dojo Treasury">
         <span>両</span> <strong id="resGold">2,500</strong> G
@@ -990,7 +1041,6 @@
     </div>
   </header>
 
-  <!-- COLLAPSIBLE GOD MODE DEVELOPER CONSOLE -->
   <div id="devConsole">
     <div style="display:flex; justify-content:space-between; align-items:center;">
       <strong>⚙️ GOD MODE MONOSPACE DEBUG DRAWER</strong>
@@ -1013,21 +1063,18 @@
     </div>
   </div>
 
-  <!-- NAVIGATION TABS -->
   <nav class="nav-tabs">
     <div class="tab-item active" data-tab="rosterTab">🏯 Roster Vault</div>
     <div class="tab-item" data-tab="breedingTab">🥚 Breeding Lair</div>
     <div class="tab-item" data-tab="arenaTab">⚔️ Micro-Arena</div>
     <div class="tab-item" data-tab="auctionTab">🏷️ Consignment</div>
     <div class="tab-item" data-tab="clearanceTab">⚡ 10s Clearance</div>
-    <div class="tab-item" data-tab="tradeTab">🌐 Mystery Trade</div>
-    <div class="tab-item" data-tab="conditioningTab">🥋 Dojo Conditioning</div>
+    <div class="tab-item" data-tab="tradeTab">🌐 Wonder Trade</div>
+    <div class="tab-item" data-tab="conditioningTab">🥋 Conditioning</div>
     <div class="tab-item" data-tab="codexTab">📜 Codex & Grails</div>
   </nav>
 
-  <!-- MAIN VIEW CONTAINER -->
   <main>
-
     <!-- TAB 1: ROSTER VAULT -->
     <section id="rosterTab" class="tab-content active">
       <div class="roster-controls">
@@ -1051,18 +1098,14 @@
           Mantises in Dojo: <strong id="rosterCount">0</strong> / 50
         </div>
       </div>
-
-      <div class="roster-grid" id="rosterGrid">
-        <!-- Mantis Cards rendered via JavaScript -->
-      </div>
+      <div class="roster-grid" id="rosterGrid"></div>
     </section>
 
     <!-- TAB 2: BREEDING LAIR -->
     <section id="breedingTab" class="tab-content">
       <div class="breeding-layout">
-        <!-- Sire & Dam Pairing Controls -->
         <div class="pair-selection-panel">
-          <div class="panel-title">🧬 Mating Mat & Punnett Analysis</div>
+          <div class="panel-title">🧬 Mating Mat & Punnett Engine</div>
 
           <div class="pair-slot">
             <div class="pair-slot-title">
@@ -1088,12 +1131,11 @@
             <button class="btn btn-gold" style="flex:1;" id="pairEggBtn" onclick="initiateBreeding()">
               🕯️ Lay Ootheca (Egg Sac)
             </button>
-            <button class="btn" onclick="autoPairBest()" title="Automatically select highest potential pair">
+            <button class="btn" onclick="autoPairBest()" title="Select highest potential pair">
               ⚡ Auto-Pair
             </button>
           </div>
 
-          <!-- 1000-Trial Monte Carlo Punnett Analysis Panel -->
           <div style="margin-top:6px;">
             <div style="font-size:11px; font-weight:700; color:var(--gold-accent); margin-bottom:4px; text-transform:uppercase;">
               Live 1,000-Trial Monte Carlo Projections:
@@ -1106,74 +1148,105 @@
           </div>
         </div>
 
-        <!-- 5 Nursery Incubator Slots -->
         <div class="panel" style="flex:1; margin-bottom:0;">
           <div class="panel-header">
             <div class="panel-title">🎋 5-Slot Nursery Incubator</div>
             <span style="font-size:12px; color:var(--text-muted);">4-Day Maturation Cycle</span>
           </div>
-
-          <div class="nursery-grid" id="nurseryGrid">
-            <!-- 5 slots rendered via JS -->
-          </div>
+          <div class="nursery-grid" id="nurseryGrid"></div>
         </div>
       </div>
     </section>
 
-    <!-- TAB 3: MICRO-ARENA COLOSSEUM -->
+    <!-- TAB 3: STREAMLINED DOM MICRO-ARENA -->
     <section id="arenaTab" class="tab-content">
       <div class="arena-layout">
-        <!-- Procedural 2D Micro-Arena Canvas -->
-        <div class="arena-canvas-wrap">
-          <canvas id="arenaCanvas" width="800" height="320"></canvas>
-          <div class="arena-overlay-hud">
-            <div class="hud-fighter" id="hudPlayer">
-              <div style="display:flex; justify-content:space-between; font-size:11px;">
-                <strong id="hudPlayerName" style="color:var(--parchment);">Champion</strong>
-                <span id="hudPlayerHpText" class="mono" style="color:#ef4444;">100/100 HP</span>
+        <!-- DOM Duel Theater -->
+        <div class="arena-dom-theater">
+          <div class="duel-ring-stage">
+            <!-- Player Fighter Station -->
+            <div class="fighter-station" id="playerStation">
+              <div class="fighter-badge-row">
+                <div style="display:flex; align-items:center;">
+                  <span class="fighter-emblem" id="domPlayerEmblem">🦗</span>
+                  <div>
+                    <strong id="domPlayerName" style="color:var(--parchment); font-size:14px;">Select Combatant</strong>
+                    <div id="domPlayerSub" style="font-size:11px; color:var(--text-muted);">Tier 1 • Stance: Aggressive</div>
+                  </div>
+                </div>
+                <span class="tag super" id="domPlayerStanceTag">ATK+</span>
               </div>
-              <div class="hud-hp-bar"><div class="hud-hp-fill" id="hudPlayerHpBar"></div></div>
-              <div class="hud-sta-bar"><div class="hud-sta-fill" id="hudPlayerStaBar"></div></div>
+
+              <div class="fighter-bars">
+                <div class="stat-bar-track">
+                  <div class="hp-bar-fill" id="domPlayerHpBar" style="width:100%;"></div>
+                  <span class="stat-bar-label" id="domPlayerHpText">100 / 100 HP</span>
+                </div>
+                <div class="stat-bar-track" style="height:8px;">
+                  <div class="sta-bar-fill" id="domPlayerStaBar" style="width:100%;"></div>
+                  <span class="stat-bar-label" id="domPlayerStaText">100 STA</span>
+                </div>
+              </div>
             </div>
 
-            <div class="hud-fighter" id="hudEnemy" style="text-align:right;">
-              <div style="display:flex; justify-content:space-between; font-size:11px;">
-                <span id="hudEnemyHpText" class="mono" style="color:#ef4444;">100/100 HP</span>
-                <strong id="hudEnemyName" style="color:#f87171;">Challenger</strong>
+            <!-- Clash Center Divider -->
+            <div class="clash-divider">
+              <div class="clash-vs-circle">VS</div>
+              <div class="clash-burst-text" id="clashBurstText">READY</div>
+            </div>
+
+            <!-- Enemy Challenger Station -->
+            <div class="fighter-station" id="enemyStation">
+              <div class="fighter-badge-row">
+                <div style="display:flex; align-items:center;">
+                  <span class="fighter-emblem" id="domEnemyEmblem">🦂</span>
+                  <div>
+                    <strong id="domEnemyName" style="color:#f87171; font-size:14px;">Challenger</strong>
+                    <div id="domEnemySub" style="font-size:11px; color:var(--text-muted);">Syndicate Rival</div>
+                  </div>
+                </div>
+                <span class="tag visual" id="domEnemyArchetypeTag">RIVAL</span>
               </div>
-              <div class="hud-hp-bar"><div class="hud-hp-fill" id="hudEnemyHpBar" style="float:right;"></div></div>
-              <div class="hud-sta-bar"><div class="hud-sta-fill" id="hudEnemyStaBar" style="float:right;"></div></div>
+
+              <div class="fighter-bars">
+                <div class="stat-bar-track">
+                  <div class="hp-bar-fill" id="domEnemyHpBar" style="width:100%;"></div>
+                  <span class="stat-bar-label" id="domEnemyHpText">100 / 100 HP</span>
+                </div>
+                <div class="stat-bar-track" style="height:8px;">
+                  <div class="sta-bar-fill" id="domEnemyStaBar" style="width:100%;"></div>
+                  <span class="stat-bar-label" id="domEnemyStaText">100 STA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls Bar -->
+          <div class="arena-controls-bar">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <label style="font-size:12px; color:var(--text-muted);">Combatant:</label>
+              <select id="arenaFighterSelect" class="select-dark" onchange="setupArenaFighter()"></select>
+            </div>
+
+            <div class="stance-group">
+              <button class="stance-btn active" id="stanceAggro" onclick="setStance('Aggressive')">Aggressive (+ATK)</button>
+              <button class="stance-btn" id="stanceDef" onclick="setStance('Defensive')">Defensive (+PARRY)</button>
+              <button class="stance-btn" id="stanceCounter" onclick="setStance('Counter')">Counter (+RIPOST)</button>
+            </div>
+
+            <div style="display:flex; gap:6px;">
+              <button class="btn btn-gold" id="startDuelBtn" onclick="startDuel()">⚔️ Duel!</button>
+              <button class="btn" id="speedToggleBtn" onclick="toggleBattleSpeed()">Speed: 1x</button>
+              <button class="btn btn-red" onclick="instantResolveBattle()">Instant</button>
             </div>
           </div>
         </div>
 
-        <!-- Tactical Controls Bar -->
-        <div class="arena-controls-bar">
-          <div style="display:flex; align-items:center; gap:8px;">
-            <label style="font-size:12px; color:var(--text-muted);">Selected Fighter:</label>
-            <select id="arenaFighterSelect" class="select-dark" onchange="setupArenaFighter()">
-              <!-- Populated with player mantises -->
-            </select>
-          </div>
-
-          <div class="stance-group">
-            <button class="stance-btn active" id="stanceAggro" onclick="setStance('Aggressive')">Aggressive (+ATK)</button>
-            <button class="stance-btn" id="stanceDef" onclick="setStance('Defensive')">Defensive (+PARRY)</button>
-            <button class="stance-btn" id="stanceCounter" onclick="setStance('Counter')">Counter (+RIPOST)</button>
-          </div>
-
-          <div style="display:flex; gap:6px;">
-            <button class="btn btn-gold" id="startDuelBtn" onclick="startDuel()">⚔️ Duel!</button>
-            <button class="btn" id="speedToggleBtn" onclick="toggleBattleSpeed()">Speed: 1x</button>
-            <button class="btn btn-red" onclick="instantResolveBattle()">Instant</button>
-          </div>
-        </div>
-
-        <!-- League Selection & Combat Log -->
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+        <!-- Leagues & Combat Ticker -->
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:10px;">
           <div class="panel" style="margin-bottom:0;">
             <div class="panel-header">
-              <div class="panel-title">🏆 Tournament Leagues</div>
+              <div class="panel-title">🏆 Tournament Rings</div>
             </div>
             <div style="display:flex; flex-direction:column; gap:6px;">
               <button class="btn" style="justify-content:space-between;" onclick="selectLeague(1)">
@@ -1197,7 +1270,7 @@
 
           <div class="panel" style="margin-bottom:0; display:flex; flex-direction:column;">
             <div class="panel-header">
-              <div class="panel-title">📜 Autonomous Combat Telemetry</div>
+              <div class="panel-title">📜 Combat Telemetry Log</div>
               <button class="btn-xs btn" onclick="clearCombatLog()">Clear</button>
             </div>
             <div class="combat-log" id="combatLog">
@@ -1216,12 +1289,9 @@
           <button class="btn btn-gold" onclick="openNewAuctionModal()">+ Consign Mantis</button>
         </div>
         <p style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">
-          5 rival AI syndicates place dynamic escalating bids based on traits and market prestige. Anti-Snipe guarantees +1.5s on last-second bids. 3% broker commission deducted upon hammer drop.
+          5 rival AI syndicates place dynamic escalating bids. Anti-Snipe guarantees +1.5s on last-second bids. 3% broker commission deducted upon hammer drop.
         </p>
-
-        <div class="auction-lanes-grid" id="auctionLanesGrid">
-          <!-- 5 lanes rendered via JS -->
-        </div>
+        <div class="auction-lanes-grid" id="auctionLanesGrid"></div>
       </div>
     </section>
 
@@ -1230,17 +1300,14 @@
       <div class="clearance-banner">
         <div>
           <div style="font-size:16px; font-weight:800; color:#fff;">⚡ SEIZED CONTRABAND & DISTRESSED LIQUIDATION</div>
-          <div style="font-size:12px; color:#fecdd3;">Bankrupt ronin stables liquidated at 70% to 99% off retail! Mystery traits and lineages.</div>
+          <div style="font-size:12px; color:#fecdd3;">Liquidated ronin stables at 70% to 99% off retail! Mystery traits and lineages.</div>
         </div>
         <div class="clearance-timer-ring" id="clearanceTimer">10.0s</div>
       </div>
-
-      <div class="roster-grid" id="clearanceGrid">
-        <!-- 4 mystery units rendered via JS -->
-      </div>
+      <div class="roster-grid" id="clearanceGrid"></div>
     </section>
 
-    <!-- TAB 6: GLOBAL MYSTERY TRADE (WONDER TRADE) -->
+    <!-- TAB 6: WONDER TRADE -->
     <section id="tradeTab" class="tab-content">
       <div class="panel">
         <div class="panel-header">
@@ -1256,7 +1323,7 @@
           <div style="max-width:440px;">
             <h3 style="color:var(--gold-primary); font-size:16px; margin-bottom:6px;">Worldwide AI Trainer Network</h3>
             <p style="font-size:12px; color:var(--text-muted); line-height:1.5;">
-              Deposit any mantis from your stable. The courier will match with a foreign dojo (Kyoto Hive, Ryukyu Ronin, Silk Road Outpost). 8% chance to roll an apex jackpot specimen!
+              Deposit any mantis from your stable to match with a foreign dojo. 8% chance to roll an apex jackpot specimen!
             </p>
           </div>
 
@@ -1269,9 +1336,7 @@
             </button>
           </div>
 
-          <div id="tradeResultBox" style="display:none; width:100%; max-width:480px;">
-            <!-- Incoming specimen card rendered here -->
-          </div>
+          <div id="tradeResultBox" style="display:none; width:100%; max-width:480px;"></div>
         </div>
       </div>
     </section>
@@ -1311,9 +1376,7 @@
           <div style="display:flex; flex-direction:column; gap:6px;">
             <div style="margin-bottom:6px;">
               <label style="font-size:12px; color:var(--text-muted);">Choose Mantis to Condition:</label>
-              <select id="trainMantisSelect" class="select-dark" style="width:100%;">
-                <!-- Populated with roster -->
-              </select>
+              <select id="trainMantisSelect" class="select-dark" style="width:100%;"></select>
             </div>
             <button class="btn" onclick="executeTraining('atk')">
               ⚔️ Scythe Slash Drills (+ATK IV, +25 Fatigue)
@@ -1340,32 +1403,25 @@
           <span style="font-size:12px; color:var(--gold-accent);">Permanent 7x-9x Value Multipliers</span>
         </div>
         <p style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">
-          Breeding any of these historic genetic combinations for the first time permanently registers your discovery, awards a 10,000 両 treasury bounty, and grants legendary market status.
+          Breeding any of these historic genetic combinations permanently registers your discovery, awards a 10,000 両 treasury bounty, and grants legendary market status.
         </p>
-        <div class="codex-grid" id="grailsCodexGrid">
-          <!-- 3 Grails Rendered Here -->
-        </div>
+        <div class="codex-grid" id="grailsCodexGrid"></div>
       </div>
 
       <div class="panel">
         <div class="panel-header">
           <div class="panel-title">📖 Comprehensive Genetics & Morphs Compendium</div>
         </div>
-        <div class="codex-grid" id="traitsCodexGrid">
-          <!-- Morphs Rendered Here -->
-        </div>
+        <div class="codex-grid" id="traitsCodexGrid"></div>
       </div>
     </section>
-
   </main>
 
   <!-- DOSSIER DETAIL MODAL -->
   <div class="modal-backdrop" id="dossierModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeDossierModal()">×</button>
-      <div id="dossierContent">
-        <!-- Rendered by JS -->
-      </div>
+      <div id="dossierContent"></div>
     </div>
   </div>
 
@@ -1380,7 +1436,7 @@
         The Blood Eclipse Shogun
       </div>
       <p style="font-size:13px; color:var(--parchment-muted); margin-bottom:14px;">
-        You have achieved a historic breeding breakthrough! An imperial grant of <strong style="color:var(--gold-primary);">10,000 両</strong> has been deposited into your treasury.
+        Historic breeding breakthrough! An imperial bounty of <strong style="color:var(--gold-primary);">10,000 両</strong> has been deposited into your treasury.
       </p>
       <div style="margin-bottom:16px;">
         <label style="font-size:12px; color:var(--text-muted); display:block; margin-bottom:4px;">Inscribe Custom Specimen Name:</label>
@@ -1390,19 +1446,17 @@
     </div>
   </div>
 
-  <!-- CANDLING DAY-2 INSPECTION MODAL -->
+  <!-- CANDLING DAY-2 MODAL -->
   <div class="modal-backdrop" id="candlingModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeCandlingModal()">×</button>
       <div class="panel-title" style="margin-bottom:10px;">🕯️ Day-2 Embryo Candling & Translucence Scope</div>
       <div style="display:flex; gap:14px; align-items:center; margin-bottom:14px; flex-wrap:wrap;">
-        <div style="width:100px; height:100px; background:radial-gradient(circle, #f59e0b 20%, #451a03 80%); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:40px; box-shadow:0 0 20px rgba(245, 158, 11, 0.6);">
+        <div style="width:90px; height:90px; background:radial-gradient(circle, #f59e0b 20%, #451a03 80%); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:36px; box-shadow:0 0 20px rgba(245, 158, 11, 0.6);">
           🦗
         </div>
         <div style="flex:1;">
-          <div id="candleEggDetails" class="mono" style="font-size:12px; color:var(--parchment);">
-            <!-- Populated via JS -->
-          </div>
+          <div id="candleEggDetails" class="mono" style="font-size:12px; color:var(--parchment);"></div>
         </div>
       </div>
       <div style="display:flex; justify-content:flex-end; gap:8px;">
@@ -1422,7 +1476,7 @@
       <button class="modal-close" onclick="closeBackupModal()">×</button>
       <div class="panel-title" style="margin-bottom:10px;">💾 Dojo Archive: State Backup & JSON Export</div>
       <p style="font-size:12px; color:var(--text-muted); margin-bottom:10px;">
-        Copy raw JSON save text or paste an existing backup to restore your dojo immediately.
+        Copy raw JSON save text or paste an existing backup to restore immediately.
       </p>
       <textarea id="backupJsonArea" class="select-dark mono" style="width:100%; height:180px; font-size:11px; margin-bottom:10px;"></textarea>
       <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;">
@@ -1440,9 +1494,7 @@
       <div style="display:flex; flex-direction:column; gap:10px;">
         <div>
           <label style="font-size:12px; color:var(--text-muted);">Choose Mantis:</label>
-          <select id="consignMantisSelect" class="select-dark" style="width:100%;" onchange="updateConsignEstimate()">
-            <!-- Populated by JS -->
-          </select>
+          <select id="consignMantisSelect" class="select-dark" style="width:100%;" onchange="updateConsignEstimate()"></select>
         </div>
         <div style="font-size:12px; color:var(--parchment-muted);">
           Appraised Market Value: <strong id="consignAppraisalVal" style="color:var(--gold-primary);">0 両</strong>
@@ -1462,26 +1514,20 @@
     </div>
   </div>
 
-  <!-- TOAST NOTIFICATION -->
   <div id="notifToast">
     <span id="toastIcon">🔔</span>
     <span id="toastMsg">Action complete</span>
   </div>
 
-  <!-- JAVASCRIPT GAME ENGINE -->
   <script>
-    /* =====================================================================
-       1. SOUND SYNTHESIZER (NATIVE WEB AUDIO API)
-       ===================================================================== */
+    /* 1. SOUND SYNTHESIZER (NATIVE WEB AUDIO API) */
     let audioCtx = null;
     let isMuted = false;
 
     function initAudio() {
       if (!audioCtx) {
         const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-        if (AudioContextClass) {
-          audioCtx = new AudioContextClass();
-        }
+        if (AudioContextClass) audioCtx = new AudioContextClass();
       }
       if (audioCtx && audioCtx.state === 'suspended') {
         audioCtx.resume();
@@ -1503,70 +1549,33 @@
         gain.connect(audioCtx.destination);
         osc.start();
         osc.stop(audioCtx.currentTime + duration);
-      } catch (e) {
-        console.error(e);
-      }
+      } catch (e) {}
     }
 
-    function soundClick() {
-      playTone(600, 'sine', 0.04, 0.15, 0.01);
-    }
-
-    function soundStrike() {
-      if (isMuted) return;
-      initAudio();
-      if (!audioCtx) return;
-      try {
-        // Fast noise burst & transient saw
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = 'sawtooth';
-        osc.frequency.setValueAtTime(220, audioCtx.currentTime);
-        osc.frequency.exponentialRampToValueAtTime(40, audioCtx.currentTime + 0.08);
-        gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.08);
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.start();
-        osc.stop(audioCtx.currentTime + 0.08);
-      } catch(e){}
-    }
-
+    function soundClick() { playTone(600, 'sine', 0.04, 0.15, 0.01); }
+    function soundStrike() { playTone(160, 'sawtooth', 0.08, 0.35, 0.01); }
     function soundParry() {
-      if (isMuted) return;
-      playTone(1760, 'sine', 0.25, 0.25, 0.001);
-      setTimeout(() => playTone(2200, 'sine', 0.15, 0.15, 0.001), 30);
+      playTone(1760, 'sine', 0.2, 0.25, 0.001);
+      setTimeout(() => playTone(2200, 'sine', 0.12, 0.15, 0.001), 30);
     }
-
     function soundCrit() {
-      if (isMuted) return;
-      playTone(180, 'sawtooth', 0.18, 0.4, 0.01);
+      playTone(140, 'sawtooth', 0.18, 0.4, 0.01);
       setTimeout(() => playTone(880, 'triangle', 0.2, 0.3, 0.01), 40);
     }
-
     function soundGavel() {
-      if (isMuted) return;
       playTone(90, 'triangle', 0.2, 0.5, 0.01);
       setTimeout(() => playTone(80, 'triangle', 0.15, 0.3, 0.01), 120);
     }
-
     function soundFanfare() {
-      if (isMuted) return;
-      const notes = [523.25, 659.25, 783.99, 1046.50];
-      notes.forEach((freq, idx) => {
-        setTimeout(() => playTone(freq, 'sine', 0.22, 0.2, 0.01), idx * 75);
+      [523.25, 659.25, 783.99, 1046.50].forEach((f, idx) => {
+        setTimeout(() => playTone(f, 'sine', 0.2, 0.2, 0.01), idx * 75);
       });
     }
-
     function soundGrail() {
-      if (isMuted) return;
-      const chords = [293.66, 369.99, 440.00, 587.33, 880.00];
-      chords.forEach((f) => playTone(f, 'triangle', 0.6, 0.15, 0.001));
+      [293.66, 369.99, 440.00, 587.33, 880.00].forEach(f => playTone(f, 'triangle', 0.6, 0.15, 0.001));
     }
 
-    /* =====================================================================
-       2. LORE & TIERS DEFINITIONS
-       ===================================================================== */
+    /* 2. PROGRESSION TIERS & GENETICS */
     const TIERS = [
       { tier: 1, name: "Sprout Nymph", role: "Novice Initiate", weapon: "Needle Scythes", baseVal: 120, baseHp: 80, baseAtk: 18, baseDef: 12, baseSpd: 22 },
       { tier: 2, name: "Bamboo Striker", role: "Skirmisher", weapon: "Splinter Blades", baseVal: 280, baseHp: 110, baseAtk: 26, baseDef: 20, baseSpd: 28 },
@@ -1576,61 +1585,41 @@
       { tier: 6, name: "Ghost-Feather Fanatic", role: "Evasive Tactician", weapon: "Razor Ribbons", baseVal: 4200, baseHp: 330, baseAtk: 74, baseDef: 60, baseSpd: 68 },
       { tier: 7, name: "Ghostly Devil Mantis", role: "Berserker Executioner", weapon: "Horned Cleavers", baseVal: 7500, baseHp: 410, baseAtk: 92, baseDef: 72, baseSpd: 78 },
       { tier: 8, name: "Emerald Emperor", role: "Royal Vanguard", weapon: "Jade Halberds", baseVal: 13000, baseHp: 500, baseAtk: 114, baseDef: 90, baseSpd: 88 },
-      { tier: 9, name: "Shadow Assassin", role: "Lethal Striker", weapon: "Obsidian Katana Raptorials", baseVal: 22000, baseHp: 600, baseAtk: 138, baseDef: 105, baseSpd: 104 },
-      { tier: 10, name: "Kensei Sovereign: Dragon-Spine Mantis", role: "Apex Legend", weapon: "Celestial Sun-Glaives", baseVal: 45000, baseHp: 750, baseAtk: 175, baseDef: 130, baseSpd: 125 }
+      { tier: 9, name: "Shadow Assassin", role: "Lethal Striker", weapon: "Obsidian Raptorials", baseVal: 22000, baseHp: 600, baseAtk: 138, baseDef: 105, baseSpd: 104 },
+      { tier: 10, name: "Kensei Sovereign: Dragon-Spine", role: "Apex Legend", weapon: "Celestial Sun-Glaives", baseVal: 45000, baseHp: 750, baseAtk: 175, baseDef: 130, baseSpd: 125 }
     ];
 
     const RECESSIVES = [
-      { key: "albino", name: "Albino Ghost", code: "a", desc: "+15% Eva, +12% Crit, -5% HP", valMult: 1.8, color: "#f8fafc", eyeColor: "#dc2626" },
-      { key: "melanistic", name: "Melanistic Void", code: "m", desc: "+20% Def, +10% Tenacity", valMult: 1.7, color: "#18181b", eyeColor: "#a855f7" },
-      { key: "crimson", name: "Crimson Bloodwing", code: "b", desc: "+18% Atk, +10% Ferocity", valMult: 1.75, color: "#991b1b", eyeColor: "#fb7185" },
-      { key: "xanthic", name: "Golden Xanthic", code: "x", desc: "+35% Value, +10% Morale", valMult: 2.0, color: "#d97706", eyeColor: "#fef08a" },
-      { key: "phosphor", name: "Bioluminescent Phosphor", code: "p", desc: "+15% Spd, Blind chance", valMult: 2.2, color: "#06b6d4", eyeColor: "#22d3ee" },
-      { key: "celestial", name: "Celestial Star-Pattern", code: "c", desc: "Ultra-Rare: +25% All Stats, +100% Value", valMult: 4.0, color: "#312e81", eyeColor: "#c084fc", ultraRare: true }
+      { key: "albino", name: "Albino Ghost", code: "a", desc: "+15% Eva, +12% Crit, -5% HP", valMult: 1.8, color: "#f8fafc" },
+      { key: "melanistic", name: "Melanistic Void", code: "m", desc: "+20% Def, +10% Tenacity", valMult: 1.7, color: "#18181b" },
+      { key: "crimson", name: "Crimson Bloodwing", code: "b", desc: "+18% Atk, +10% Ferocity", valMult: 1.75, color: "#991b1b" },
+      { key: "xanthic", name: "Golden Xanthic", code: "x", desc: "+35% Value, +10% Morale", valMult: 2.0, color: "#d97706" },
+      { key: "phosphor", name: "Bioluminescent Phosphor", code: "p", desc: "+15% Spd, Blind chance", valMult: 2.2, color: "#06b6d4" },
+      { key: "celestial", name: "Celestial Star-Pattern", code: "c", desc: "Ultra-Rare: +25% All Stats, +100% Value", valMult: 4.0, color: "#312e81", ultraRare: true }
     ];
 
     const CODOMINANTS = [
-      { key: "spiny", name: "Spiny Forelegs", hetName: "Spiny Forelegs", superName: "Super Spiny Forelegs", superBonus: "+25 Atk & Bleed" },
-      { key: "crest", name: "Crown Crest", hetName: "Crown Crest", superName: "Super Crown Crest", superBonus: "+20 Def & Parry" },
-      { key: "carapace", name: "Titan Carapace", hetName: "Titan Carapace", superName: "Super Titan Carapace", superBonus: "+40 HP & +15 Armor" },
-      { key: "wings", name: "Phantom Wings", hetName: "Phantom Wings", superName: "Super Phantom Wings", superBonus: "+25 Spd & +12% Dodge" }
+      { key: "spiny", name: "Spiny Forelegs", hetName: "Spiny Forelegs", superName: "Super Spiny Forelegs" },
+      { key: "crest", name: "Crown Crest", hetName: "Crown Crest", superName: "Super Crown Crest" },
+      { key: "carapace", name: "Titan Carapace", hetName: "Titan Carapace", superName: "Super Titan Carapace" },
+      { key: "wings", name: "Phantom Wings", hetName: "Phantom Wings", superName: "Super Phantom Wings" }
     ];
 
     const GRAILS = [
-      {
-        id: "blood_shogun",
-        title: "The Blood Eclipse Shogun",
-        req: "Melanistic (m/m) + Crimson (b/b) + Super Spiny Forelegs",
-        mult: 7.0,
-        desc: "An obsidian crimson nightmare draped in razor serrations. Supreme battlefield ferocity."
-      },
-      {
-        id: "celestial_archon",
-        title: "The Celestial Archon",
-        req: "Celestial (c/c) + Phosphor (p/p) + Super Phantom Wings",
-        mult: 8.5,
-        desc: "A glowing cosmic specter whose luminous wings scatter dazzling starlight."
-      },
-      {
-        id: "golden_kensei",
-        title: "The Golden Sun Kensei",
-        req: "Xanthic (x/x) + Albino (a/a) + Super Crown Crest",
-        mult: 9.0,
-        desc: "The sacred white-gold sovereign. Revered by emperors and undefeated in pit duels."
-      }
+      { id: "blood_shogun", title: "The Blood Eclipse Shogun", req: "Melanistic (m/m) + Crimson (b/b) + Super Spiny Forelegs", mult: 7.0, desc: "An obsidian crimson nightmare draped in razor serrations." },
+      { id: "celestial_archon", title: "The Celestial Archon", req: "Celestial (c/c) + Phosphor (p/p) + Super Phantom Wings", mult: 8.5, desc: "A glowing cosmic specter whose luminous wings scatter starlight." },
+      { id: "golden_kensei", title: "The Golden Sun Kensei", req: "Xanthic (x/x) + Albino (a/a) + Super Crown Crest", mult: 9.0, desc: "The sacred white-gold sovereign revered across the realm." }
     ];
 
     const AI_SYNDICATES = [
-      { name: "Edo Shogunate Stables", focus: "crest", pref: "Defensive Lineages", mult: 1.25 },
-      { name: "Shadow Pit Syndicate", focus: "melanistic", pref: "Void & Bleed Assassins", mult: 1.35 },
-      { name: "Imperial Golden Pavilion", focus: "xanthic", pref: "Golden & Celestial Morphs", mult: 1.45 },
-      { name: "Ronin Blood-Circle", focus: "crimson", pref: "High Ferocity & Damage", mult: 1.30 },
-      { name: "Silk Road Curios", focus: "albino", pref: "Ghost & Phosphor Rarities", mult: 1.40 }
+      { name: "Edo Shogunate Stables", mult: 1.25 },
+      { name: "Shadow Pit Syndicate", mult: 1.35 },
+      { name: "Imperial Golden Pavilion", mult: 1.45 },
+      { name: "Ronin Blood-Circle", mult: 1.30 },
+      { name: "Silk Road Curios", mult: 1.40 }
     ];
 
-    /* =====================================================================
-       3. GLOBAL GAME STATE & LOCALSTORAGE PERSISTENCE
-       ===================================================================== */
+    /* 3. GLOBAL STATE & PERSISTENCE */
     const STORAGE_KEY = "kamakura_mantis_v1";
 
     let state = {
@@ -1650,25 +1639,15 @@
     let battleSpeed = 1;
 
     function saveState() {
-      try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-      } catch (e) {
-        console.error("Local save error:", e);
-      }
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
     }
 
     function loadState() {
       try {
         const raw = localStorage.getItem(STORAGE_KEY);
-        if (raw) {
-          const parsed = JSON.parse(raw);
-          state = Object.assign(state, parsed);
-        } else {
-          // Initialize Starter Stables
-          seedStarterStable();
-        }
+        if (raw) state = Object.assign(state, JSON.parse(raw));
+        else seedStarterStable();
       } catch (e) {
-        console.error("Load failed, falling back to starter stable", e);
         seedStarterStable();
       }
     }
@@ -1678,19 +1657,12 @@
       document.getElementById('toastIcon').textContent = icon;
       document.getElementById('toastMsg').textContent = msg;
       toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 2600);
+      setTimeout(() => toast.classList.remove('show'), 2500);
     }
 
-    /* =====================================================================
-       4. MANTIS CREATION & GENETICS ENGINE
-       ===================================================================== */
-    let mantisIdCounter = 100;
-
+    /* 4. MANTIS ENGINE & VALUATION */
     function generateIV() {
-      // 1 to 100 weighted
-      const r1 = Math.floor(Math.random() * 100) + 1;
-      const r2 = Math.floor(Math.random() * 100) + 1;
-      return Math.round((r1 + r2) / 2);
+      return Math.round(((Math.random() * 100 + 1) + (Math.random() * 100 + 1)) / 2);
     }
 
     function getIVGrade(val) {
@@ -1707,26 +1679,18 @@
     const JAPANESE_NAMES = [
       "Kuro-Kage", "Aka-Tsuba", "Shiro-Ryu", "Midori-Hime", "Kaze-Maru", "Raijin-Ken", 
       "Guren-Bachi", "Tsubame", "Hagane", "Kogarashi", "Asuka", "Muramasa", "Masamune", 
-      "Oborozuki", "Hotaru", "Kitsune", "Kotetsu", "Enma", "Suzaku", "Genbu"
+      "Hotaru", "Kitsune", "Kotetsu", "Enma", "Suzaku", "Genbu"
     ];
 
     function createMantis(tier = 1, sex = null, forcedGenes = {}) {
-      mantisIdCounter++;
-      const tierObj = TIERS[tier - 1] || TIERS[0];
       const isMale = sex ? (sex === 'M') : (Math.random() < 0.5);
       const name = JAPANESE_NAMES[Math.floor(Math.random() * JAPANESE_NAMES.length)] + " " + (isMale ? "♂" : "♀");
 
-      // Recessives: 0 (Wild/none), 1 (Het/Carrier), 2 (Visual/Super)
       const recessives = {};
-      RECESSIVES.forEach(r => {
-        recessives[r.key] = forcedGenes[r.key] !== undefined ? forcedGenes[r.key] : 0;
-      });
+      RECESSIVES.forEach(r => recessives[r.key] = forcedGenes[r.key] !== undefined ? forcedGenes[r.key] : 0);
 
-      // Codominants: 0 (None), 1 (Het), 2 (Super)
       const codominants = {};
-      CODOMINANTS.forEach(c => {
-        codominants[c.key] = forcedGenes[c.key] !== undefined ? forcedGenes[c.key] : 0;
-      });
+      CODOMINANTS.forEach(c => codominants[c.key] = forcedGenes[c.key] !== undefined ? forcedGenes[c.key] : 0);
 
       const ivs = {
         atk: forcedGenes.ivs?.atk || generateIV(),
@@ -1753,71 +1717,49 @@
         createdDay: state.day
       };
 
-      // Check grail match
       mantis.grail = evaluateGrailMatch(mantis);
       return mantis;
     }
 
     function evaluateGrailMatch(m) {
-      if (m.recessives.melanistic === 2 && m.recessives.crimson === 2 && m.codominants.spiny === 2) {
-        return "blood_shogun";
-      }
-      if (m.recessives.celestial === 2 && m.recessives.phosphor === 2 && m.codominants.wings === 2) {
-        return "celestial_archon";
-      }
-      if (m.recessives.xanthic === 2 && m.recessives.albino === 2 && m.codominants.crest === 2) {
-        return "golden_kensei";
-      }
+      if (m.recessives.melanistic === 2 && m.recessives.crimson === 2 && m.codominants.spiny === 2) return "blood_shogun";
+      if (m.recessives.celestial === 2 && m.recessives.phosphor === 2 && m.codominants.wings === 2) return "celestial_archon";
+      if (m.recessives.xanthic === 2 && m.recessives.albino === 2 && m.codominants.crest === 2) return "golden_kensei";
       return null;
     }
 
     function seedStarterStable() {
-      // 1 Sire Tier II with Spiny Forelegs het
       const sire = createMantis(2, 'M', { spiny: 1, origin: "Ancestral Gift" });
       sire.name = "Ronin Kuro-Kage ♂";
       sire.ivs.atk = 78;
 
-      // 1 Dam Tier II Carrier of Albino with Crown Crest
       const dam = createMantis(2, 'F', { albino: 1, crest: 1, origin: "Ancestral Gift" });
       dam.name = "Lady Shiro-Hime ♀";
       dam.ivs.def = 82;
 
-      // 1 Initiate Sprout Nymph
       const recruit = createMantis(1, 'M', { origin: "Wild Harvest" });
-
       state.roster = [sire, dam, recruit];
       saveState();
     }
 
-    /* =====================================================================
-       5. DYNAMIC VALUATION ALGORITHM
-       ===================================================================== */
     function calculateMantisValue(m) {
       if (!m) return 0;
       const t = TIERS[m.tier - 1] || TIERS[0];
       const ivSum = m.ivs.atk + m.ivs.def + m.ivs.spd + m.ivs.sta + m.ivs.fer;
       let base = t.baseVal + (ivSum * 3.5);
 
-      // Recessives multiplier
       let mult = 1.0;
       RECESSIVES.forEach(r => {
-        const val = m.recessives[r.key];
-        if (val === 2) mult *= r.valMult;
-        else if (val === 1) mult += 0.18; // Carrier value bonus
+        if (m.recessives[r.key] === 2) mult *= r.valMult;
+        else if (m.recessives[r.key] === 1) mult += 0.18;
       });
 
-      // Codominants
       CODOMINANTS.forEach(c => {
-        const val = m.codominants[c.key];
-        if (val === 2) mult *= 1.85; // Super trait
-        else if (val === 1) mult *= 1.25; // Het trait
+        if (m.codominants[c.key] === 2) mult *= 1.85;
+        else if (m.codominants[c.key] === 1) mult *= 1.25;
       });
 
-      // Battle Record
       base += (m.wins * 35) - (m.losses * 12);
-      if (base < 20) base = 20;
-
-      // World's First Grail multipliers
       if (m.grail) {
         const gObj = GRAILS.find(g => g.id === m.grail);
         if (gObj) mult *= gObj.mult;
@@ -1828,117 +1770,62 @@
       return Math.max(25, finalVal);
     }
 
-    /* =====================================================================
-       6. BREEDING ENGINE & MONTE CARLO PUNNETT SIMULATOR
-       ===================================================================== */
+    /* 5. BREEDING & PUNNETT ENGINE */
     function simulateBreedingTrial(sire, dam) {
-      // Mendelian Recessives: 1 allele from each parent
       const outRec = {};
       RECESSIVES.forEach(r => {
         const sVal = sire.recessives[r.key] || 0;
         const dVal = dam.recessives[r.key] || 0;
-        // Sire gives allele:
-        let sAllele = 0;
-        if (sVal === 2) sAllele = 1;
-        else if (sVal === 1) sAllele = (Math.random() < 0.5 ? 1 : 0);
-
-        let dAllele = 0;
-        if (dVal === 2) dAllele = 1;
-        else if (dVal === 1) dAllele = (Math.random() < 0.5 ? 1 : 0);
-
-        outRec[r.key] = sAllele + dAllele;
+        let sA = sVal === 2 ? 1 : (sVal === 1 ? (Math.random() < 0.5 ? 1 : 0) : 0);
+        let dA = dVal === 2 ? 1 : (dVal === 1 ? (Math.random() < 0.5 ? 1 : 0) : 0);
+        outRec[r.key] = sA + dA;
       });
 
-      // Codominants
       const outCodom = {};
       CODOMINANTS.forEach(c => {
         const sVal = sire.codominants[c.key] || 0;
         const dVal = dam.codominants[c.key] || 0;
-        let sA = 0;
-        if (sVal === 2) sA = 1;
-        else if (sVal === 1) sA = (Math.random() < 0.5 ? 1 : 0);
-
-        let dA = 0;
-        if (dVal === 2) dA = 1;
-        else if (dVal === 1) dA = (Math.random() < 0.5 ? 1 : 0);
-
+        let sA = sVal === 2 ? 1 : (sVal === 1 ? (Math.random() < 0.5 ? 1 : 0) : 0);
+        let dA = dVal === 2 ? 1 : (dVal === 1 ? (Math.random() < 0.5 ? 1 : 0) : 0);
         outCodom[c.key] = sA + dA;
       });
 
-      // Tier: Base avg, 22% chance of +1 tier if parents match or strong IVs
       let baseTier = Math.floor((sire.tier + dam.tier) / 2);
       if (Math.random() < 0.22 && baseTier < 10) baseTier += 1;
 
-      // IV inheritance: 3 from either parent, 2 blended with mutation
       const ivKeys = ['atk', 'def', 'spd', 'sta', 'fer'];
       const outIVs = {};
-      ivKeys.forEach((k) => {
+      ivKeys.forEach(k => {
         if (Math.random() < 0.6) {
-          outIVs[k] = (Math.random() < 0.5) ? sire.ivs[k] : dam.ivs[k];
+          outIVs[k] = Math.random() < 0.5 ? sire.ivs[k] : dam.ivs[k];
         } else {
           const avg = Math.round((sire.ivs[k] + dam.ivs[k]) / 2);
-          const variance = Math.floor(Math.random() * 15) - 6; // -6 to +8
-          outIVs[k] = Math.max(1, Math.min(100, avg + variance));
+          outIVs[k] = Math.max(1, Math.min(100, avg + (Math.floor(Math.random() * 15) - 6)));
         }
       });
 
-      // Check Grail
       let isGrail = false;
       if (outRec.melanistic === 2 && outRec.crimson === 2 && outCodom.spiny === 2) isGrail = true;
       if (outRec.celestial === 2 && outRec.phosphor === 2 && outCodom.wings === 2) isGrail = true;
       if (outRec.xanthic === 2 && outRec.albino === 2 && outCodom.crest === 2) isGrail = true;
 
-      return {
-        tier: baseTier,
-        recessives: outRec,
-        codominants: outCodom,
-        ivs: outIVs,
-        isGrail: isGrail
-      };
+      return { tier: baseTier, recessives: outRec, codominants: outCodom, ivs: outIVs, isGrail: isGrail };
     }
 
     function runMonteCarloPunnett(sire, dam, trials = 1000) {
-      const stats = {
-        recessiveVisuals: {},
-        recessiveHets: {},
-        superCodoms: {},
-        hetCodoms: {},
-        grails: 0,
-        tierDistribution: {},
-        avgIVTotal: 0
-      };
+      const stats = { recessiveVisuals: {}, superCodoms: {}, grails: 0, avgIVTotal: 0 };
+      RECESSIVES.forEach(r => stats.recessiveVisuals[r.key] = 0);
+      CODOMINANTS.forEach(c => stats.superCodoms[c.key] = 0);
 
-      RECESSIVES.forEach(r => {
-        stats.recessiveVisuals[r.key] = 0;
-        stats.recessiveHets[r.key] = 0;
-      });
-      CODOMINANTS.forEach(c => {
-        stats.superCodoms[c.key] = 0;
-        stats.hetCodoms[c.key] = 0;
-      });
-
-      let totalIVAccum = 0;
-
+      let totalIV = 0;
       for (let i = 0; i < trials; i++) {
         const off = simulateBreedingTrial(sire, dam);
-
-        RECESSIVES.forEach(r => {
-          if (off.recessives[r.key] === 2) stats.recessiveVisuals[r.key]++;
-          else if (off.recessives[r.key] === 1) stats.recessiveHets[r.key]++;
-        });
-
-        CODOMINANTS.forEach(c => {
-          if (off.codominants[c.key] === 2) stats.superCodoms[c.key]++;
-          else if (off.codominants[c.key] === 1) stats.hetCodoms[c.key]++;
-        });
-
+        RECESSIVES.forEach(r => { if (off.recessives[r.key] === 2) stats.recessiveVisuals[r.key]++; });
+        CODOMINANTS.forEach(c => { if (off.codominants[c.key] === 2) stats.superCodoms[c.key]++; });
         if (off.isGrail) stats.grails++;
-
-        stats.tierDistribution[off.tier] = (stats.tierDistribution[off.tier] || 0) + 1;
-        totalIVAccum += (off.ivs.atk + off.ivs.def + off.ivs.spd + off.ivs.sta + off.ivs.fer);
+        totalIV += (off.ivs.atk + off.ivs.def + off.ivs.spd + off.ivs.sta + off.ivs.fer);
       }
-
-      stats.avgIVTotal = Math.round(totalIVAccum / trials);
+      stats.avgIVTotal = Math.round(totalIV / trials);
       return stats;
     }
 
@@ -1948,87 +1835,53 @@
         container.innerHTML = `<div style="color:var(--text-sub); text-align:center; padding:18px 0;">Select both Sire and Dam to run Monte Carlo genetics simulation.</div>`;
         return;
       }
-
       const mc = runMonteCarloPunnett(sire, dam, 1000);
-
       let html = `<div style="color:var(--gold-primary); font-weight:bold; margin-bottom:6px;">Offspring Phenotype Probabilities (N=1,000):</div>`;
 
-      // Grail check
       if (mc.grails > 0) {
-        const grailPct = ((mc.grails / 1000) * 100).toFixed(1);
+        const gPct = ((mc.grails / 1000) * 100).toFixed(1);
         html += `<div class="odds-row" style="color:#fbbf24; font-weight:bold;">
-          <span>🌟 WORLD'S FIRST GRAIL CHANCE:</span>
-          <span>${grailPct}% <div class="odds-bar-bg"><div class="odds-bar-fill" style="width:${grailPct}%; background:#fbbf24;"></div></div></span>
+          <span>🌟 WORLD'S FIRST GRAIL:</span>
+          <span>${gPct}% <div class="odds-bar-bg"><div class="odds-bar-fill" style="width:${gPct}%; background:#fbbf24;"></div></div></span>
         </div>`;
       }
 
-      // Recessives
       RECESSIVES.forEach(r => {
-        const visPct = ((statsVal(mc.recessiveVisuals[r.key]) / 1000) * 100).toFixed(1);
-        const hetPct = ((statsVal(mc.recessiveHets[r.key]) / 1000) * 100).toFixed(1);
-        if (parseFloat(visPct) > 0 || parseFloat(hetPct) > 0) {
-          html += `<div class="odds-row">
-            <span>${r.name}:</span>
-            <span>Vis: <strong>${visPct}%</strong> (Het: ${hetPct}%)
-              <div class="odds-bar-bg"><div class="odds-bar-fill" style="width:${visPct}%;"></div></div>
-            </span>
-          </div>`;
+        const visPct = ((mc.recessiveVisuals[r.key] / 1000) * 100).toFixed(1);
+        if (parseFloat(visPct) > 0) {
+          html += `<div class="odds-row"><span>${r.name}:</span><span>${visPct}% <div class="odds-bar-bg"><div class="odds-bar-fill" style="width:${visPct}%;"></div></div></span></div>`;
         }
       });
 
-      // Codominants
       CODOMINANTS.forEach(c => {
-        const superPct = ((statsVal(mc.superCodoms[c.key]) / 1000) * 100).toFixed(1);
-        const hetPct = ((statsVal(mc.hetCodoms[c.key]) / 1000) * 100).toFixed(1);
-        if (parseFloat(superPct) > 0 || parseFloat(hetPct) > 0) {
-          html += `<div class="odds-row">
-            <span>${c.superName}:</span>
-            <span>Super: <strong>${superPct}%</strong> (Het: ${hetPct}%)
-              <div class="odds-bar-bg"><div class="odds-bar-fill" style="width:${superPct}%; background:#10b981;"></div></div>
-            </span>
-          </div>`;
+        const supPct = ((mc.superCodoms[c.key] / 1000) * 100).toFixed(1);
+        if (parseFloat(supPct) > 0) {
+          html += `<div class="odds-row"><span>${c.superName}:</span><span>${supPct}% <div class="odds-bar-bg"><div class="odds-bar-fill" style="width:${supPct}%; background:#10b981;"></div></div></span></div>`;
         }
       });
 
-      // Expected Tier
-      const tierKeys = Object.keys(mc.tierDistribution).sort((a,b) => a-b);
-      const tierStr = tierKeys.map(k => `T${k}: ${((mc.tierDistribution[k]/1000)*100).toFixed(0)}%`).join(' | ');
-      html += `<div class="odds-row" style="margin-top:4px;"><span>Projected Tiers:</span><span>${tierStr}</span></div>`;
-      html += `<div class="odds-row"><span>Projected Avg IV Total:</span><span style="color:#38bdf8;">${mc.avgIVTotal} / 500</span></div>`;
-
+      html += `<div class="odds-row" style="margin-top:4px;"><span>Projected Avg IV Total:</span><span style="color:#38bdf8;">${mc.avgIVTotal} / 500</span></div>`;
       container.innerHTML = html;
     }
 
-    function statsVal(val) {
-      return val || 0;
-    }
-
     function onBreederSelectChange() {
-      const sireId = document.getElementById('sireSelect').value;
-      const damId = document.getElementById('damSelect').value;
-      const sire = state.roster.find(m => m.id === sireId);
-      const dam = state.roster.find(m => m.id === damId);
-
+      const sId = document.getElementById('sireSelect').value;
+      const dId = document.getElementById('damSelect').value;
+      const sire = state.roster.find(m => m.id === sId);
+      const dam = state.roster.find(m => m.id === dId);
       document.getElementById('sireSummary').textContent = sire ? `${sire.name} (T${sire.tier})` : "None";
       document.getElementById('damSummary').textContent = dam ? `${dam.name} (T${dam.tier})` : "None";
-
       renderPunnettDisplay(sire, dam);
     }
 
     function autoPairBest() {
       soundClick();
-      const males = state.roster.filter(m => m.sex === 'M' && !m.injured);
-      const females = state.roster.filter(m => m.sex === 'F' && !m.injured);
-
+      const males = state.roster.filter(m => m.sex === 'M' && !m.injured).sort((a,b) => calculateMantisValue(b) - calculateMantisValue(a));
+      const females = state.roster.filter(m => m.sex === 'F' && !m.injured).sort((a,b) => calculateMantisValue(b) - calculateMantisValue(a));
       if (males.length === 0 || females.length === 0) {
         showToast("Need at least 1 healthy Male and 1 Female!", "⚠️");
         return;
       }
-
-      // Rank by Tier and IV sum
-      males.sort((a,b) => calculateMantisValue(b) - calculateMantisValue(a));
-      females.sort((a,b) => calculateMantisValue(b) - calculateMantisValue(a));
-
       document.getElementById('sireSelect').value = males[0].id;
       document.getElementById('damSelect').value = females[0].id;
       onBreederSelectChange();
@@ -2036,39 +1889,32 @@
     }
 
     function initiateBreeding() {
-      const sireId = document.getElementById('sireSelect').value;
-      const damId = document.getElementById('damSelect').value;
-
-      if (!sireId || !damId) {
+      const sId = document.getElementById('sireSelect').value;
+      const dId = document.getElementById('damSelect').value;
+      if (!sId || !dId) {
         showToast("Please choose both Sire and Dam!", "⚠️");
         return;
       }
-
-      const emptySlotIdx = state.nursery.findIndex(slot => slot === null);
-      if (emptySlotIdx === -1) {
+      const emptyIdx = state.nursery.findIndex(slot => slot === null);
+      if (emptyIdx === -1) {
         showToast("All 5 nursery incubators are currently full!", "⚠️");
         return;
       }
 
-      const sire = state.roster.find(m => m.id === sireId);
-      const dam = state.roster.find(m => m.id === damId);
-
-      // Precompute embryo genetics
+      const sire = state.roster.find(m => m.id === sId);
+      const dam = state.roster.find(m => m.id === dId);
       const embryo = simulateBreedingTrial(sire, dam);
 
-      const ootheca = {
+      state.nursery[emptyIdx] = {
         id: "EGG_" + Date.now(),
         sireName: sire.name,
         damName: dam.name,
-        sireId: sire.id,
-        damId: dam.id,
         progressDays: 0,
-        maturationTarget: 4, // 4-day cycle
+        maturationTarget: 4,
         embryo: embryo,
         candled: false
       };
 
-      state.nursery[emptySlotIdx] = ootheca;
       state.stats.mantisesBred++;
       saveState();
       renderNursery();
@@ -2079,11 +1925,9 @@
     function renderNursery() {
       const container = document.getElementById('nurseryGrid');
       container.innerHTML = "";
-
       state.nursery.forEach((slot, idx) => {
         const slotEl = document.createElement('div');
         slotEl.className = "egg-slot" + (slot ? " active" : "");
-
         if (!slot) {
           slotEl.innerHTML = `
             <div style="font-size:24px; opacity:0.3; margin-bottom:6px;">🎋</div>
@@ -2094,19 +1938,12 @@
           const pct = Math.min(100, Math.round((slot.progressDays / slot.maturationTarget) * 100));
           const canCandle = slot.progressDays >= 2;
           const canHatch = slot.progressDays >= slot.maturationTarget;
-
           slotEl.innerHTML = `
             <div class="egg-icon">🥚</div>
             <div style="font-size:12px; font-weight:700; color:var(--parchment);">Sac #${idx+1}</div>
-            <div style="font-size:10px; color:var(--text-muted); line-height:1.2; margin:2px 0;">
-              ${slot.sireName} × ${slot.damName}
-            </div>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar-val" style="width:${pct}%;"></div>
-            </div>
-            <div style="font-size:10px; font-family:monospace; color:var(--gold-primary); margin-bottom:6px;">
-              Day ${slot.progressDays} of ${slot.maturationTarget} (${pct}%)
-            </div>
+            <div style="font-size:10px; color:var(--text-muted); line-height:1.2; margin:2px 0;">${slot.sireName} × ${slot.damName}</div>
+            <div class="progress-bar-wrap"><div class="progress-bar-val" style="width:${pct}%;"></div></div>
+            <div style="font-size:10px; font-family:monospace; color:var(--gold-primary); margin-bottom:6px;">Day ${slot.progressDays} of ${slot.maturationTarget} (${pct}%)</div>
             <div style="display:flex; gap:4px; flex-direction:column; width:100%;">
               ${canCandle ? `<button class="btn btn-xs btn-gold" onclick="openCandlingModal(${idx})">🕯️ Candle Egg</button>` : ''}
               ${canHatch ? `<button class="btn btn-xs btn-jade" onclick="hatchEgg(${idx})">🐣 Hatch Nymph!</button>` : ''}
@@ -2123,26 +1960,15 @@
       currentCandleIndex = idx;
       const egg = state.nursery[idx];
       if (!egg) return;
-
-      const modal = document.getElementById('candlingModal');
-      const details = document.getElementById('candleEggDetails');
-
       egg.candled = true;
       const emb = egg.embryo;
       const t = TIERS[emb.tier - 1] || TIERS[0];
-
-      // Formulate morph string
       const visuals = [];
-      RECESSIVES.forEach(r => {
-        if (emb.recessives[r.key] === 2) visuals.push(r.name);
-      });
-      CODOMINANTS.forEach(c => {
-        if (emb.codominants[c.key] === 2) visuals.push(c.superName);
-      });
-
+      RECESSIVES.forEach(r => { if (emb.recessives[r.key] === 2) visuals.push(r.name); });
+      CODOMINANTS.forEach(c => { if (emb.codominants[c.key] === 2) visuals.push(c.superName); });
       const ivAvg = Math.round((emb.ivs.atk + emb.ivs.def + emb.ivs.spd + emb.ivs.sta + emb.ivs.fer) / 5);
 
-      details.innerHTML = `
+      document.getElementById('candleEggDetails').innerHTML = `
         <div><strong>Projected Tier:</strong> ${t.name} (Tier ${emb.tier})</div>
         <div><strong>Visual Morphs:</strong> ${visuals.length ? visuals.join(', ') : 'Wild Type'}</div>
         <div><strong>Overall IV Rating:</strong> ${ivAvg}/100 (${getIVGrade(ivAvg)})</div>
@@ -2150,8 +1976,7 @@
           ${emb.isGrail ? '🌟 HISTORIC GRAIL SIGNATURE DETECTED!' : 'Standard Viable Embryo'}
         </div>
       `;
-
-      modal.classList.add('open');
+      document.getElementById('candlingModal').classList.add('open');
     }
 
     function closeCandlingModal() {
@@ -2162,7 +1987,7 @@
     function cullCandledEgg() {
       if (currentCandleIndex === null) return;
       state.nursery[currentCandleIndex] = null;
-      state.rations += 5; // Compost bonus
+      state.rations += 5;
       closeCandlingModal();
       saveState();
       renderNursery();
@@ -2175,17 +2000,13 @@
       soundFanfare();
       const egg = state.nursery[idx];
       if (!egg) return;
-
       if (state.roster.length >= 50) {
-        showToast("Roster full! Wholesale sell or release first.", "⚠️");
+        showToast("Roster full! Sell or release specimens first.", "⚠️");
         return;
       }
-
-      // Convert embryo to real mantis
       const emb = egg.embryo;
       const isMale = Math.random() < 0.5;
       const name = JAPANESE_NAMES[Math.floor(Math.random() * JAPANESE_NAMES.length)] + " " + (isMale ? "♂" : "♀");
-
       const nymph = {
         id: "M_" + Date.now().toString(36) + "_" + Math.floor(Math.random() * 9999),
         name: name,
@@ -2202,50 +2023,33 @@
         grail: null,
         createdDay: state.day
       };
-
       nymph.grail = evaluateGrailMatch(nymph);
 
       state.nursery[idx] = null;
       state.roster.unshift(nymph);
-
       saveState();
       renderNursery();
       renderRoster();
       populateBreederDropdowns();
 
-      if (nymph.grail) {
-        triggerGrailDiscovery(nymph);
-      } else {
-        showToast(`🐣 ${nymph.name} hatched successfully!`, "🌟");
-      }
+      if (nymph.grail) triggerGrailDiscovery(nymph);
+      else showToast(`🐣 ${nymph.name} hatched successfully!`, "🌟");
     }
 
-    /* =====================================================================
-       7. WORLD'S FIRST GRAIL DISCOVERY SYSTEM
-       ===================================================================== */
+    /* 6. WORLD'S FIRST GRAIL DISCOVERY SYSTEM */
     let pendingGrailMantis = null;
-
     function triggerGrailDiscovery(mantis) {
       pendingGrailMantis = mantis;
       const gObj = GRAILS.find(g => g.id === mantis.grail);
-
       soundGrail();
-      const modal = document.getElementById('discoveryModal');
       document.getElementById('discoveryGrailTitle').textContent = gObj ? gObj.title : "Legendary Grail";
       document.getElementById('grailCustomNameInput').value = mantis.name;
-
-      // Award 10,000 Ryo Grant
       state.gold += 10000;
-      state.discoveredGrails[mantis.grail] = {
-        title: gObj.title,
-        discoveredDay: state.day,
-        specimenName: mantis.name
-      };
-
+      state.discoveredGrails[mantis.grail] = { title: gObj.title, discoveredDay: state.day, specimenName: mantis.name };
       saveState();
       updateHeaderLedger();
       renderCodex();
-      modal.classList.add('open');
+      document.getElementById('discoveryModal').classList.add('open');
     }
 
     function confirmGrailNaming() {
@@ -2265,23 +2069,16 @@
       showToast("Grail Registered Permanently in Codex!", "📜");
     }
 
-    /* =====================================================================
-       8. 2D PROCEDURAL MICRO-ARENA COLOSSEUM CANVAS
-       ===================================================================== */
-    const arenaCanvas = document.getElementById('arenaCanvas');
-    const ctx = arenaCanvas.getContext('2d');
-
+    /* 7. STREAMLINED DOM-BASED DUEL ARENA */
     let duelActive = false;
-    let duelAnimationId = null;
+    let duelInterval = null;
     let playerFighter = null;
     let enemyFighter = null;
     let selectedLeagueLevel = 1;
     let playerStance = "Aggressive";
 
-    // Dynamic combat telemetry
-    let pCombat = { hp: 100, maxHp: 100, sta: 100, x: 120, y: 190, state: 'idle', flash: 0, animTick: 0 };
-    let eCombat = { hp: 100, maxHp: 100, sta: 100, x: 680, y: 190, state: 'idle', flash: 0, animTick: 0 };
-    let floatingTexts = [];
+    let pCombat = { hp: 100, maxHp: 100, sta: 100, tick: 0 };
+    let eCombat = { hp: 100, maxHp: 100, sta: 100, tick: 0 };
 
     function setStance(stance) {
       soundClick();
@@ -2289,19 +2086,24 @@
       document.getElementById('stanceAggro').classList.toggle('active', stance === 'Aggressive');
       document.getElementById('stanceDef').classList.toggle('active', stance === 'Defensive');
       document.getElementById('stanceCounter').classList.toggle('active', stance === 'Counter');
-      showToast(`Tactical Stance changed to ${stance}`, "🥋");
+      document.getElementById('domPlayerStanceTag').textContent = stance === 'Aggressive' ? 'ATK+' : (stance === 'Defensive' ? 'DEF+' : 'RIPOST+');
+      showToast(`Stance set to ${stance}`, "🥋");
     }
 
     function selectLeague(lvl) {
       soundClick();
       selectedLeagueLevel = lvl;
-      showToast(`Selected League: Level ${lvl}`, "🏆");
+      showToast(`League Selected: Level ${lvl}`, "🏆");
     }
 
     function toggleBattleSpeed() {
       soundClick();
       battleSpeed = (battleSpeed === 1) ? 3 : 1;
       document.getElementById('speedToggleBtn').textContent = `Speed: ${battleSpeed}x`;
+      if (duelActive) {
+        clearInterval(duelInterval);
+        duelInterval = setInterval(combatStep, 250 / battleSpeed);
+      }
     }
 
     function clearCombatLog() {
@@ -2312,34 +2114,43 @@
       const log = document.getElementById('combatLog');
       const row = document.createElement('div');
       if (className) row.className = className;
-      row.textContent = `[T+${Math.floor(pCombat.animTick)}] ${text}`;
+      row.textContent = `[Rnd ${pCombat.tick}] ${text}`;
       log.appendChild(row);
       log.scrollTop = log.scrollHeight;
     }
 
     function setupArenaFighter() {
       const id = document.getElementById('arenaFighterSelect').value;
-      playerFighter = state.roster.find(m => m.id === id);
-      if (!playerFighter && state.roster.length > 0) {
-        playerFighter = state.roster[0];
+      playerFighter = state.roster.find(m => m.id === id) || state.roster[0];
+      if (playerFighter) {
+        document.getElementById('domPlayerName').textContent = playerFighter.name;
+        document.getElementById('domPlayerSub').textContent = `Tier ${playerFighter.tier} • ${TIERS[playerFighter.tier - 1].weapon}`;
+        pCombat.maxHp = TIERS[playerFighter.tier - 1].baseHp + Math.round(playerFighter.ivs.sta * 1.5) + (playerFighter.codominants.carapace === 2 ? 50 : 0);
+        pCombat.hp = pCombat.maxHp;
+        pCombat.sta = 100;
+        updateDomBars();
       }
-      updateArenaHud();
-      drawArenaFrame();
     }
 
-    function updateArenaHud() {
-      if (playerFighter) {
-        document.getElementById('hudPlayerName').textContent = playerFighter.name;
-        document.getElementById('hudPlayerHpText').textContent = `${Math.ceil(pCombat.hp)}/${pCombat.maxHp} HP`;
-        document.getElementById('hudPlayerHpBar').style.width = `${Math.max(0, (pCombat.hp / pCombat.maxHp) * 100)}%`;
-        document.getElementById('hudPlayerStaBar').style.width = `${Math.max(0, pCombat.sta)}%`;
-      }
-      if (enemyFighter) {
-        document.getElementById('hudEnemyName').textContent = enemyFighter.name;
-        document.getElementById('hudEnemyHpText').textContent = `${Math.ceil(eCombat.hp)}/${eCombat.maxHp} HP`;
-        document.getElementById('hudEnemyHpBar').style.width = `${Math.max(0, (eCombat.hp / eCombat.maxHp) * 100)}%`;
-        document.getElementById('hudEnemyStaBar').style.width = `${Math.max(0, eCombat.sta)}%`;
-      }
+    function updateDomBars() {
+      const pPct = Math.max(0, Math.min(100, (pCombat.hp / pCombat.maxHp) * 100));
+      const ePct = Math.max(0, Math.min(100, (eCombat.hp / eCombat.maxHp) * 100));
+
+      document.getElementById('domPlayerHpBar').style.width = pPct + "%";
+      document.getElementById('domPlayerHpText').textContent = `${Math.ceil(pCombat.hp)} / ${pCombat.maxHp} HP`;
+      document.getElementById('domPlayerStaBar').style.width = pCombat.sta + "%";
+      document.getElementById('domPlayerStaText').textContent = `${Math.ceil(pCombat.sta)} STA`;
+
+      document.getElementById('domEnemyHpBar').style.width = ePct + "%";
+      document.getElementById('domEnemyHpText').textContent = `${Math.ceil(eCombat.hp)} / ${eCombat.maxHp} HP`;
+      document.getElementById('domEnemyStaBar').style.width = eCombat.sta + "%";
+      document.getElementById('domEnemyStaText').textContent = `${Math.ceil(eCombat.sta)} STA`;
+    }
+
+    function triggerImpactFX(stationId, fxClass) {
+      const el = document.getElementById(stationId);
+      el.classList.add(fxClass);
+      setTimeout(() => el.classList.remove(fxClass), 200);
     }
 
     function startDuel() {
@@ -2353,102 +2164,80 @@
         return;
       }
 
-      // Generate Enemy based on chosen League
-      let enemyTier = selectedLeagueLevel * 2;
-      if (selectedLeagueLevel === 1) enemyTier = Math.floor(Math.random() * 2) + 1; // T1-T2
-      if (selectedLeagueLevel === 2) enemyTier = Math.floor(Math.random() * 2) + 3; // T3-T4
-      if (selectedLeagueLevel === 3) enemyTier = Math.floor(Math.random() * 2) + 5; // T5-T6
-      if (selectedLeagueLevel === 4) enemyTier = Math.floor(Math.random() * 3) + 8; // T8-T10
+      let eTier = selectedLeagueLevel * 2;
+      if (selectedLeagueLevel === 1) eTier = Math.floor(Math.random() * 2) + 1;
+      if (selectedLeagueLevel === 2) eTier = Math.floor(Math.random() * 2) + 3;
+      if (selectedLeagueLevel === 3) eTier = Math.floor(Math.random() * 2) + 5;
+      if (selectedLeagueLevel === 4) eTier = Math.floor(Math.random() * 3) + 8;
 
-      enemyFighter = createMantis(enemyTier, Math.random() < 0.5 ? 'M' : 'F', { origin: "Rival Pit Syndicate" });
-      enemyFighter.name = "Rival: " + enemyFighter.name;
+      enemyFighter = createMantis(eTier, Math.random() < 0.5 ? 'M' : 'F', { origin: "Rival Syndicate Dojo" });
+      enemyFighter.name = "Rival " + enemyFighter.name;
 
-      // Calculate combat stats
-      const pT = TIERS[playerFighter.tier - 1] || TIERS[0];
-      const eT = TIERS[enemyFighter.tier - 1] || TIERS[0];
+      document.getElementById('domEnemyName').textContent = enemyFighter.name;
+      document.getElementById('domEnemySub').textContent = `Tier ${enemyFighter.tier} • ${TIERS[enemyFighter.tier - 1].name}`;
+
+      const pT = TIERS[playerFighter.tier - 1];
+      const eT = TIERS[enemyFighter.tier - 1];
 
       pCombat.maxHp = pT.baseHp + Math.round(playerFighter.ivs.sta * 1.5) + (playerFighter.codominants.carapace === 2 ? 50 : 0);
       pCombat.hp = pCombat.maxHp;
       pCombat.sta = 100;
-      pCombat.x = 220;
-      pCombat.animTick = 0;
+      pCombat.tick = 0;
 
       eCombat.maxHp = eT.baseHp + Math.round(enemyFighter.ivs.sta * 1.5) + (enemyFighter.codominants.carapace === 2 ? 50 : 0);
       eCombat.hp = eCombat.maxHp;
       eCombat.sta = 100;
-      eCombat.x = 580;
-      eCombat.animTick = 0;
+      eCombat.tick = 0;
 
-      floatingTexts = [];
       duelActive = true;
       document.getElementById('startDuelBtn').disabled = true;
+      document.getElementById('clashBurstText').textContent = "DUELING";
 
       logCombat(`Bout Initiated! ${playerFighter.name} vs ${enemyFighter.name}`, "log-parry");
       soundStrike();
+      updateDomBars();
 
-      lastTime = performance.now();
-      requestAnimationFrame(combatLoop);
+      clearInterval(duelInterval);
+      duelInterval = setInterval(combatStep, 250 / battleSpeed);
     }
 
-    let lastTime = 0;
-    function combatLoop(now) {
+    function combatStep() {
       if (!duelActive) return;
-      const dt = Math.min(0.1, (now - lastTime) / 1000) * battleSpeed;
-      lastTime = now;
+      pCombat.tick++;
 
-      updateCombat(dt);
-      drawArenaFrame();
+      // Stamina regeneration
+      pCombat.sta = Math.min(100, pCombat.sta + 8);
+      eCombat.sta = Math.min(100, eCombat.sta + 8);
+
+      const pSpd = (TIERS[playerFighter.tier - 1].baseSpd + playerFighter.ivs.spd) / 60;
+      const eSpd = (TIERS[enemyFighter.tier - 1].baseSpd + enemyFighter.ivs.spd) / 60;
+
+      // Player strike turn
+      if (Math.random() < (0.28 * pSpd) && pCombat.sta >= 18) {
+        processDuelStrike(playerFighter, enemyFighter, pCombat, eCombat, true);
+      }
+
+      // Enemy strike turn
+      if (Math.random() < (0.28 * eSpd) && eCombat.sta >= 18) {
+        processDuelStrike(enemyFighter, playerFighter, eCombat, pCombat, false);
+      }
+
+      updateDomBars();
 
       if (pCombat.hp <= 0 || eCombat.hp <= 0) {
         concludeDuel();
-      } else {
-        duelAnimationId = requestAnimationFrame(combatLoop);
       }
     }
 
-    function updateCombat(dt) {
-      pCombat.animTick += dt * 60;
-      eCombat.animTick += dt * 60;
+    function processDuelStrike(atkMantis, defMantis, aCom, dCom, isPlayerAttacking) {
+      aCom.sta = Math.max(0, aCom.sta - 20);
 
-      // Recover stamina
-      pCombat.sta = Math.min(100, pCombat.sta + (15 * dt));
-      eCombat.sta = Math.min(100, eCombat.sta + (15 * dt));
+      const aT = TIERS[atkMantis.tier - 1];
+      const dT = TIERS[defMantis.tier - 1];
 
-      // Attack cadence based on Speed
-      const pSpeed = (TIERS[playerFighter.tier - 1].baseSpd + playerFighter.ivs.spd) / 50;
-      const eSpeed = (TIERS[enemyFighter.tier - 1].baseSpd + enemyFighter.ivs.spd) / 50;
+      let rawAtk = aT.baseAtk + (atkMantis.ivs.atk * 0.7);
+      let rawDef = dT.baseDef + (defMantis.ivs.def * 0.45);
 
-      // Check Player Strike
-      if (Math.random() < (0.04 * pSpeed * (battleSpeed)) && pCombat.sta >= 20) {
-        executeStrike(playerFighter, enemyFighter, pCombat, eCombat, true);
-      }
-
-      // Check Enemy Strike
-      if (Math.random() < (0.04 * eSpeed * (battleSpeed)) && eCombat.sta >= 20) {
-        executeStrike(enemyFighter, playerFighter, eCombat, pCombat, false);
-      }
-
-      // Update floating texts
-      for (let i = floatingTexts.length - 1; i >= 0; i--) {
-        const ft = floatingTexts[i];
-        ft.y -= 30 * dt;
-        ft.alpha -= 0.8 * dt;
-        if (ft.alpha <= 0) floatingTexts.splice(i, 1);
-      }
-
-      updateArenaHud();
-    }
-
-    function executeStrike(attacker, defender, aCom, dCom, isPlayerAttacking) {
-      aCom.sta = Math.max(0, aCom.sta - 22);
-
-      const aT = TIERS[attacker.tier - 1] || TIERS[0];
-      const dT = TIERS[defender.tier - 1] || TIERS[0];
-
-      let rawAtk = aT.baseAtk + (attacker.ivs.atk * 0.75);
-      let rawDef = dT.baseDef + (defender.ivs.def * 0.5);
-
-      // Stance Modifiers
       if (isPlayerAttacking) {
         if (playerStance === "Aggressive") rawAtk *= 1.35;
         if (playerStance === "Defensive") rawAtk *= 0.75;
@@ -2456,64 +2245,61 @@
         if (playerStance === "Defensive") rawDef *= 1.4;
       }
 
-      // Parry Check
-      const parryChance = isPlayerAttacking ? 0.12 : (playerStance === "Defensive" ? 0.35 : 0.15);
-      if (Math.random() < parryChance && dCom.sta >= 15) {
+      // Defend / Parry check
+      const parryProb = isPlayerAttacking ? 0.12 : (playerStance === "Defensive" ? 0.35 : 0.14);
+      if (Math.random() < parryProb && dCom.sta >= 15) {
+        dCom.sta = Math.max(0, dCom.sta - 12);
         soundParry();
-        dCom.flash = 6;
-        spawnCombatText(dCom.x, dCom.y - 40, "PARRY!", "#38bdf8");
-        logCombat(`${defender.name} deflected with a razor parry!`, "log-parry");
+        triggerImpactFX(isPlayerAttacking ? 'enemyStation' : 'playerStation', 'parry-flash');
+        document.getElementById('clashBurstText').textContent = "PARRY!";
+        logCombat(`${defMantis.name} parried the incoming blade!`, "log-parry");
 
-        // Counter stance riposte
         if (!isPlayerAttacking && playerStance === "Counter") {
-          spawnCombatText(aCom.x, aCom.y - 40, "RIPOSTE!", "#fbbf24");
-          pCombat.hp -= 0; // Riposte hits enemy
-          eCombat.hp = Math.max(0, eCombat.hp - (rawAtk * 0.8));
-          logCombat(`${attacker.name} suffered a crushing riposte!`, "log-crit");
+          const ripDmg = Math.max(10, Math.round(rawAtk * 0.85));
+          eCombat.hp = Math.max(0, eCombat.hp - ripDmg);
+          triggerImpactFX('enemyStation', 'hit-shake');
+          document.getElementById('clashBurstText').textContent = "RIPOSTE!";
+          logCombat(`RIPOSTE! Counter stance inflicts ${ripDmg} damage on ${atkMantis.name}!`, "log-crit");
         }
         return;
       }
 
-      // Crit Check
-      const critChance = (attacker.ivs.fer * 0.4) / 100;
-      let isCrit = Math.random() < critChance;
-      let dmg = Math.max(8, Math.round(rawAtk - (rawDef * 0.45)));
+      // Damage calculation
+      const critChance = (atkMantis.ivs.fer * 0.38) / 100;
+      const isCrit = Math.random() < critChance;
+      let dmg = Math.max(8, Math.round(rawAtk - (rawDef * 0.4)));
 
       if (isCrit) {
-        dmg = Math.round(dmg * 1.75);
+        dmg = Math.round(dmg * 1.7);
         soundCrit();
-        spawnCombatText(dCom.x, dCom.y - 40, `CRIT -${dmg}!`, "#f43f5e");
-        logCombat(`CRITICAL HIT! ${attacker.name} strikes with lethal incision for ${dmg}!`, "log-crit");
+        document.getElementById('clashBurstText').textContent = `CRIT -${dmg}!`;
+        logCombat(`CRITICAL SLASH! ${atkMantis.name} cleaves for ${dmg} DMG!`, "log-crit");
       } else {
         soundStrike();
-        spawnCombatText(dCom.x, dCom.y - 40, `-${dmg}`, "#fca5a5");
-        logCombat(`${attacker.name} connects for ${dmg} damage.`);
+        document.getElementById('clashBurstText').textContent = `-${dmg}`;
+        logCombat(`${atkMantis.name} lands slice for ${dmg} DMG.`);
       }
 
-      if (!isPlayerAttacking && godModeInvincible) {
-        dmg = 0; // Dev god mode
-      }
+      if (!isPlayerAttacking && godModeInvincible) dmg = 0;
 
       dCom.hp = Math.max(0, dCom.hp - dmg);
-      dCom.flash = 8;
-    }
-
-    function spawnCombatText(x, y, text, color) {
-      floatingTexts.push({ x: x + (Math.random()*20 - 10), y: y, text: text, color: color, alpha: 1.0 });
+      const targetStation = isPlayerAttacking ? 'enemyStation' : 'playerStation';
+      triggerImpactFX(targetStation, 'hit-shake');
+      triggerImpactFX(targetStation, 'hit-flash');
     }
 
     function instantResolveBattle() {
       if (!duelActive) return;
       while (pCombat.hp > 0 && eCombat.hp > 0) {
-        updateCombat(0.1);
+        combatStep();
       }
-      concludeDuel();
     }
 
     function concludeDuel() {
+      clearInterval(duelInterval);
       duelActive = false;
       document.getElementById('startDuelBtn').disabled = false;
-      updateArenaHud();
+      updateDomBars();
 
       const playerWon = pCombat.hp > 0;
       if (playerWon) {
@@ -2521,20 +2307,20 @@
         state.stats.battlesWon++;
         playerFighter.wins++;
 
-        // Purse calculation
-        let purse = 150;
-        if (selectedLeagueLevel === 2) purse = 600;
-        if (selectedLeagueLevel === 3) purse = 2200;
-        if (selectedLeagueLevel === 4) purse = 8500;
-
+        const purses = [0, 150, 600, 2200, 8500];
+        const purse = purses[selectedLeagueLevel] || 150;
         state.gold += purse;
-        logCombat(`VICTORY! ${playerFighter.name} claims the ring. Awarded ${purse} 両!`, "log-win");
+
+        document.getElementById('clashBurstText').textContent = "VICTORY!";
+        logCombat(`VICTORY! ${playerFighter.name} triumphs. Purse: +${purse} 両!`, "log-win");
         showToast(`Bout Won! Claimed +${purse} 両`, "🏆");
       } else {
         state.stats.battlesLost++;
         playerFighter.losses++;
         playerFighter.injured = true;
-        logCombat(`DEFEAT! ${playerFighter.name} collapsed. Suffered chitin injury.`, "log-crit");
+
+        document.getElementById('clashBurstText').textContent = "DEFEAT";
+        logCombat(`DEFEAT! ${playerFighter.name} fell in battle. Suffered chitin injury.`, "log-crit");
         showToast(`${playerFighter.name} was injured in combat!`, "⚠️");
       }
 
@@ -2543,187 +2329,26 @@
       renderRoster();
     }
 
-    /* 2D Micro-Arena Silhouette Rendering */
-    function drawArenaFrame() {
-      ctx.clearRect(0, 0, arenaCanvas.width, arenaCanvas.height);
-
-      // Background Dojo Tatami & Ring
-      const grad = ctx.createLinearGradient(0, 0, 0, arenaCanvas.height);
-      grad.addColorStop(0, "#0c0a08");
-      grad.addColorStop(0.7, "#1c1712");
-      grad.addColorStop(1, "#100d0a");
-      ctx.fillStyle = grad;
-      ctx.fillRect(0, 0, arenaCanvas.width, arenaCanvas.height);
-
-      // Tatami mat ring lines
-      ctx.strokeStyle = "rgba(217, 119, 6, 0.25)";
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-      ctx.ellipse(arenaCanvas.width / 2, 220, 320, 65, 0, 0, Math.PI * 2);
-      ctx.stroke();
-
-      // Draw Fighters
-      if (playerFighter) {
-        drawProceduralMantis(ctx, pCombat.x, pCombat.y, playerFighter, false, pCombat.animTick, pCombat.flash);
-        if (pCombat.flash > 0) pCombat.flash--;
-      }
-      if (enemyFighter) {
-        drawProceduralMantis(ctx, eCombat.x, eCombat.y, enemyFighter, true, eCombat.animTick, eCombat.flash);
-        if (eCombat.flash > 0) eCombat.flash--;
-      }
-
-      // Draw Floating Combat Texts
-      floatingTexts.forEach(ft => {
-        ctx.save();
-        ctx.globalAlpha = Math.max(0, ft.alpha);
-        ctx.font = "bold 16px monospace";
-        ctx.fillStyle = ft.color;
-        ctx.textAlign = "center";
-        ctx.shadowColor = "rgba(0,0,0,0.9)";
-        ctx.shadowBlur = 6;
-        ctx.fillText(ft.text, ft.x, ft.y);
-        ctx.restore();
-      });
-    }
-
-    function drawProceduralMantis(c, x, y, mantis, flip, tick, flash) {
-      c.save();
-      c.translate(x, y);
-      if (flip) c.scale(-1, 1);
-
-      // Determine colors based on genetics
-      let bodyColor = "#22c55e"; // Natural Green
-      let eyeColor = "#ef4444";
-      let bladeColor = "#e2e8f0";
-
-      if (mantis.recessives.albino === 2) { bodyColor = "#f8fafc"; eyeColor = "#dc2626"; bladeColor = "#ffffff"; }
-      if (mantis.recessives.melanistic === 2) { bodyColor = "#18181b"; eyeColor = "#a855f7"; bladeColor = "#475569"; }
-      if (mantis.recessives.crimson === 2) { bodyColor = "#be123c"; eyeColor = "#fda4af"; bladeColor = "#f43f5e"; }
-      if (mantis.recessives.xanthic === 2) { bodyColor = "#eab308"; eyeColor = "#fef08a"; bladeColor = "#facc15"; }
-      if (mantis.recessives.phosphor === 2) { bodyColor = "#06b6d4"; eyeColor = "#67e8f9"; bladeColor = "#22d3ee"; }
-      if (mantis.recessives.celestial === 2) { bodyColor = "#312e81"; eyeColor = "#c084fc"; bladeColor = "#818cf8"; }
-
-      if (flash > 0) {
-        bodyColor = "#ffffff";
-        bladeColor = "#ffffff";
-      }
-
-      // Breathing / Stance sway
-      const bob = Math.sin(tick * 0.1) * 3;
-      const strikeExtend = (mantis.codominants.spiny === 2 ? 8 : 0);
-
-      // Abdomen
-      c.fillStyle = bodyColor;
-      c.beginPath();
-      c.ellipse(-35, -20 + bob, 25 + (mantis.tier * 2), 10 + (mantis.tier), -0.35, 0, Math.PI * 2);
-      c.fill();
-      c.strokeStyle = "rgba(0,0,0,0.5)";
-      c.lineWidth = 2;
-      c.stroke();
-
-      // Pronotum (Thorax)
-      c.beginPath();
-      c.ellipse(0, -32 + bob, 22, 6, -0.65, 0, Math.PI * 2);
-      c.fill();
-      c.stroke();
-
-      // Triangular Head
-      c.beginPath();
-      c.moveTo(18, -48 + bob);
-      c.lineTo(30, -38 + bob);
-      c.lineTo(14, -30 + bob);
-      c.closePath();
-      c.fill();
-      c.stroke();
-
-      // Compound Eyes
-      c.fillStyle = eyeColor;
-      c.beginPath();
-      c.arc(24, -44 + bob, 3.5, 0, Math.PI * 2);
-      c.arc(17, -33 + bob, 3.5, 0, Math.PI * 2);
-      c.fill();
-
-      // Antennae
-      c.strokeStyle = eyeColor;
-      c.lineWidth = 1.5;
-      c.beginPath();
-      c.moveTo(25, -45 + bob);
-      c.lineTo(40 + Math.sin(tick * 0.15) * 4, -62 + bob);
-      c.moveTo(20, -47 + bob);
-      c.lineTo(32, -65 + bob);
-      c.stroke();
-
-      // Walking legs
-      c.strokeStyle = bodyColor;
-      c.lineWidth = 2.5;
-      c.beginPath();
-      c.moveTo(-10, -22 + bob);
-      c.lineTo(-20, 5);
-      c.lineTo(-30, 15);
-
-      c.moveTo(5, -26 + bob);
-      c.lineTo(15, 2);
-      c.lineTo(22, 16);
-      c.stroke();
-
-      // Raptorial Forelegs (Scythes)
-      c.strokeStyle = bladeColor;
-      c.lineWidth = 4 + (mantis.tier * 0.4);
-      c.beginPath();
-      c.moveTo(12, -34 + bob);
-      c.lineTo(28 + strikeExtend, -24 + bob);
-      c.lineTo(16, -10 + bob);
-      c.stroke();
-
-      // Crown Crest feature
-      if (mantis.codominants.crest > 0) {
-        c.fillStyle = "#fbbf24";
-        c.beginPath();
-        c.moveTo(24, -49 + bob);
-        c.lineTo(30, -58 + bob);
-        c.lineTo(26, -50 + bob);
-        c.lineTo(34, -55 + bob);
-        c.fill();
-      }
-
-      // Phantom Wings feature
-      if (mantis.codominants.wings > 0) {
-        c.fillStyle = "rgba(255,255,255,0.35)";
-        c.beginPath();
-        c.ellipse(-30, -36 + bob, 35, 7, -0.4, 0, Math.PI * 2);
-        c.fill();
-      }
-
-      c.restore();
-    }
-
-    /* =====================================================================
-       9. 5-LANE PLAYER CONSIGNMENT AUCTION HOUSE
-       ===================================================================== */
+    /* 8. 5-LANE PLAYER CONSIGNMENT AUCTION HOUSE */
     function initializeAuctions() {
-      if (!state.auctions || state.auctions.length === 0) {
-        state.auctions = [];
-      }
+      if (!state.auctions) state.auctions = [];
     }
 
     function openNewAuctionModal() {
       soundClick();
       const select = document.getElementById('consignMantisSelect');
       select.innerHTML = "";
-
       const available = state.roster.filter(m => !m.isAuctioning);
       if (available.length === 0) {
         showToast("No mantises available to consign!", "⚠️");
         return;
       }
-
       available.forEach(m => {
         const opt = document.createElement('option');
         opt.value = m.id;
-        opt.textContent = `${m.name} (Tier ${m.tier} - ${m.sex}) — Value: ${calculateMantisValue(m)} 両`;
+        opt.textContent = `${m.name} (T${m.tier}) — Market: ${calculateMantisValue(m)} 両`;
         select.appendChild(opt);
       });
-
       updateConsignEstimate();
       document.getElementById('consignModal').classList.add('open');
     }
@@ -2745,7 +2370,6 @@
       const id = document.getElementById('consignMantisSelect').value;
       const m = state.roster.find(item => item.id === id);
       if (!m) return;
-
       if (state.auctions.length >= 5) {
         showToast("All 5 auction lanes are busy!", "⚠️");
         return;
@@ -2763,18 +2387,16 @@
       }
 
       m.isAuctioning = true;
-
-      const lane = {
+      state.auctions.push({
         id: "AUC_" + Date.now(),
         mantis: m,
         currentBid: reserve,
         highestBidder: "Reserve Opening",
-        timeLeft: 35.0, // seconds
+        timeLeft: 35.0,
         isPolished: isPolished,
         log: [`Auction commenced at ${reserve} 両 reserve.`]
-      };
+      });
 
-      state.auctions.push(lane);
       closeConsignModal();
       saveState();
       updateHeaderLedger();
@@ -2785,44 +2407,39 @@
 
     function auctionTicker() {
       if (!state.auctions || state.auctions.length === 0) return;
-
       let changed = false;
+
       for (let i = state.auctions.length - 1; i >= 0; i--) {
         const a = state.auctions[i];
         a.timeLeft -= 1.0;
 
-        // Rival AI Syndicate Bidding Engine
         if (Math.random() < 0.45 && a.timeLeft > 1.0) {
           const syn = AI_SYNDICATES[Math.floor(Math.random() * AI_SYNDICATES.length)];
           const baseAppraisal = calculateMantisValue(a.mantis) * (a.isPolished ? 1.66 : 1.0) * syn.mult;
 
           if (a.currentBid < baseAppraisal) {
-            const increment = Math.max(20, Math.round(a.currentBid * (0.06 + Math.random() * 0.12)));
-            a.currentBid += increment;
+            const inc = Math.max(20, Math.round(a.currentBid * (0.07 + Math.random() * 0.12)));
+            a.currentBid += inc;
             a.highestBidder = syn.name;
             a.log.unshift(`${syn.name}: bid ${a.currentBid.toLocaleString()} 両!`);
 
-            // Anti-Snipe Mechanic: Under 1.5s remaining adds +2s
+            // Anti-Snipe Mechanic
             if (a.timeLeft < 1.5) {
               a.timeLeft += 2.0;
-              a.log.unshift(`[ANTI-SNIPE TRIGGERED] Timer extended +2.0s!`);
+              a.log.unshift(`[ANTI-SNIPE] Timer extended +2.0s!`);
             }
             changed = true;
           }
         }
 
-        // Hammer Drop
         if (a.timeLeft <= 0) {
           soundGavel();
-          const brokerFee = Math.round(a.currentBid * 0.03);
-          const net = a.currentBid - brokerFee;
-
+          const commission = Math.round(a.currentBid * 0.03);
+          const net = a.currentBid - commission;
           state.gold += net;
-          // Remove from player roster
           state.roster = state.roster.filter(m => m.id !== a.mantis.id);
           state.auctions.splice(i, 1);
           changed = true;
-
           showToast(`GAVEL STRIKE! ${a.mantis.name} sold for ${a.currentBid} 両 (Net: ${net} 両)`, "🔨");
         }
       }
@@ -2832,19 +2449,23 @@
         updateHeaderLedger();
         renderAuctions();
       } else {
-        updateAuctionTimersOnly();
+        const cards = document.querySelectorAll('.auction-lane-card');
+        state.auctions.forEach((lane, idx) => {
+          if (cards[idx]) {
+            const timerEl = cards[idx].querySelector('.auction-timer');
+            if (timerEl) timerEl.textContent = `${Math.max(0, lane.timeLeft).toFixed(1)}s`;
+          }
+        });
       }
     }
 
     function renderAuctions() {
       const container = document.getElementById('auctionLanesGrid');
       container.innerHTML = "";
-
       for (let i = 0; i < 5; i++) {
         const lane = state.auctions[i];
         const card = document.createElement('div');
         card.className = "auction-lane-card" + (lane && lane.isPolished ? " polished" : "");
-
         if (!lane) {
           card.innerHTML = `
             <div style="font-size:13px; color:var(--text-sub); font-weight:bold;">Consignment Lane #${i + 1}</div>
@@ -2863,31 +2484,15 @@
               <span style="font-size:12px; color:var(--text-muted);">Current Bid:</span>
               <strong class="mono" style="color:var(--gold-primary); font-size:15px;">${lane.currentBid.toLocaleString()} 両</strong>
             </div>
-            <div style="font-size:11px; color:var(--text-sub);">
-              Leader: <span style="color:var(--parchment);">${lane.highestBidder}</span>
-            </div>
-            <div class="bidder-feed mono">
-              ${lane.log.map(l => `<div>• ${l}</div>`).join('')}
-            </div>
+            <div style="font-size:11px; color:var(--text-sub);">Leader: <span style="color:var(--parchment);">${lane.highestBidder}</span></div>
+            <div class="bidder-feed mono">${lane.log.map(l => `<div>• ${l}</div>`).join('')}</div>
           `;
         }
         container.appendChild(card);
       }
     }
 
-    function updateAuctionTimersOnly() {
-      const cards = document.querySelectorAll('.auction-lane-card');
-      state.auctions.forEach((lane, idx) => {
-        if (cards[idx]) {
-          const timerEl = cards[idx].querySelector('.auction-timer');
-          if (timerEl) timerEl.textContent = `${Math.max(0, lane.timeLeft).toFixed(1)}s`;
-        }
-      });
-    }
-
-    /* =====================================================================
-       10. 10-SECOND DISTRESSED CLEARANCE TAB
-       ===================================================================== */
+    /* 9. 10-SECOND DISTRESSED CLEARANCE */
     let clearanceItems = [];
     let clearanceSeconds = 10.0;
 
@@ -2895,17 +2500,11 @@
       clearanceItems = [];
       for (let i = 0; i < 4; i++) {
         const tier = Math.min(8, Math.floor(Math.random() * 5) + 1);
-        const mantis = createMantis(tier, Math.random() < 0.5 ? 'M' : 'F', { origin: "Bankrupt Liquidation Contraband" });
+        const mantis = createMantis(tier, Math.random() < 0.5 ? 'M' : 'F', { origin: "Bankrupt Liquidation" });
         const retail = calculateMantisValue(mantis);
-        const discountPct = Math.floor(Math.random() * 25) + 72; // 72% to 96% off
+        const discountPct = Math.floor(Math.random() * 25) + 72;
         const clearancePrice = Math.max(30, Math.round(retail * (1 - (discountPct / 100))));
-
-        clearanceItems.push({
-          mantis: mantis,
-          retail: retail,
-          price: clearancePrice,
-          discount: discountPct
-        });
+        clearanceItems.push({ mantis: mantis, retail: retail, price: clearancePrice, discount: discountPct });
       }
       renderClearance();
     }
@@ -2922,34 +2521,20 @@
     function renderClearance() {
       const container = document.getElementById('clearanceGrid');
       container.innerHTML = "";
-
       clearanceItems.forEach((item, idx) => {
         const m = item.mantis;
         const card = document.createElement('div');
         card.className = "mantis-card";
         card.innerHTML = `
           <div class="card-top">
-            <span class="mantis-name">
-              ${m.name} <span class="sex-symbol ${m.sex === 'M' ? 'male' : 'female'}">${m.sex === 'M' ? '♂' : '♀'}</span>
-            </span>
-            <span class="tier-badge" style="background:#881337; color:#fff; border-color:#e11d48;">
-              -${item.discount}% OFF
-            </span>
+            <span class="mantis-name">${m.name} <span class="sex-symbol ${m.sex === 'M' ? 'male' : 'female'}">${m.sex === 'M' ? '♂' : '♀'}</span></span>
+            <span class="tier-badge" style="background:#881337; color:#fff; border-color:#e11d48;">-${item.discount}% OFF</span>
           </div>
-          <div class="card-subline">
-            <span>Tier ${m.tier}</span>
-            <span>Origin: ${m.origin}</span>
-          </div>
-          <div style="font-size:11px; color:var(--text-sub);">
-            Retail Valuation: <span style="text-decoration:line-through;">${item.retail} 両</span>
-          </div>
+          <div class="card-subline"><span>Tier ${m.tier}</span><span>Origin: ${m.origin}</span></div>
+          <div style="font-size:11px; color:var(--text-sub);">Retail Valuation: <span style="text-decoration:line-through;">${item.retail} 両</span></div>
           <div class="card-footer">
-            <div class="card-val mono" style="font-size:16px; color:#4ade80;">
-              ${item.price} 両
-            </div>
-            <button class="btn btn-xs btn-gold" onclick="buyClearanceItem(${idx})">
-              Claim Specimen
-            </button>
+            <div class="card-val mono" style="font-size:16px; color:#4ade80;">${item.price} 両</div>
+            <button class="btn btn-xs btn-gold" onclick="buyClearanceItem(${idx})">Claim Specimen</button>
           </div>
         `;
         container.appendChild(card);
@@ -2960,7 +2545,6 @@
       soundClick();
       const item = clearanceItems[idx];
       if (!item) return;
-
       if (state.gold < item.price) {
         showToast("Treasury lacks sufficient Ryo!", "⚠️");
         return;
@@ -2969,29 +2553,21 @@
         showToast("Roster full! Wholesale sell or release first.", "⚠️");
         return;
       }
-
       state.gold -= item.price;
       state.roster.unshift(item.mantis);
       clearanceItems.splice(idx, 1);
-
       saveState();
       updateHeaderLedger();
       renderRoster();
       renderClearance();
       soundFanfare();
-      showToast(`Acquired distressed Tier ${item.mantis.tier} mantis!`, "⚡");
+      showToast(`Acquired distressed Tier ${item.mantis.tier} specimen!`, "⚡");
     }
 
-    /* =====================================================================
-       11. GLOBAL MYSTERY TRADE (WONDER TRADE)
-       ===================================================================== */
+    /* 10. WONDER TRADE */
     const FOREIGN_ORIGINS = [
-      "Kyoto Imperial Dojo",
-      "Ryukyu Archipelago Ronin",
-      "Mount Fuji Mountain Hive",
-      "Silk Road Caravan Envoy",
-      "Edo Black-Market Contraband",
-      "Hokkaido Glacial Wilds"
+      "Kyoto Imperial Dojo", "Ryukyu Archipelago Ronin", "Mount Fuji Mountain Hive", 
+      "Silk Road Caravan Envoy", "Edo Black-Market Contraband", "Hokkaido Glacial Wilds"
     ];
 
     function populateTradeDropdown() {
@@ -3011,34 +2587,26 @@
         showToast("Select a specimen to deposit into trade network!", "⚠️");
         return;
       }
-
       soundClick();
       const deposited = state.roster.find(m => m.id === id);
       if (!deposited) return;
 
-      // Start Scanning Radar
       const radar = document.getElementById('tradeRadar');
       radar.classList.add('scanning');
       document.getElementById('initiateTradeBtn').disabled = true;
-
       showToast("Searching global network for courier exchange...", "🌐");
 
       setTimeout(() => {
         radar.classList.remove('scanning');
         document.getElementById('initiateTradeBtn').disabled = false;
-
-        // Remove deposited mantis
         state.roster = state.roster.filter(m => m.id !== id);
 
-        // 8% Jackpot Roll
         const isJackpot = Math.random() < 0.08;
-        let incomingTier = isJackpot ? Math.floor(Math.random() * 3) + 8 : Math.floor(Math.random() * 4) + 2;
-
+        const incomingTier = isJackpot ? Math.floor(Math.random() * 3) + 8 : Math.floor(Math.random() * 4) + 2;
         const origin = FOREIGN_ORIGINS[Math.floor(Math.random() * FOREIGN_ORIGINS.length)];
         const incoming = createMantis(incomingTier, Math.random() < 0.5 ? 'M' : 'F', { origin: origin });
 
         if (isJackpot) {
-          // Give special codom or recessive
           incoming.codominants.wings = 2;
           incoming.ivs.atk = 96;
         }
@@ -3048,37 +2616,29 @@
         updateHeaderLedger();
         renderRoster();
         populateTradeDropdown();
-
-        // Render result card
         soundFanfare();
+
         const resBox = document.getElementById('tradeResultBox');
         resBox.style.display = 'block';
         resBox.innerHTML = `
           <div class="panel" style="border-color:${isJackpot ? 'var(--gold-primary)' : 'var(--border-wood)'};">
             <div style="font-size:12px; font-weight:bold; color:${isJackpot ? 'var(--gold-primary)' : 'var(--jade-primary)'}; margin-bottom:4px;">
-              ${isJackpot ? '🌟 JACKPOT ROLL RECEIVED!' : '✅ Trade Received!'}
+              ${isJackpot ? '🌟 JACKPOT SPECIMEN RECEIVED!' : '✅ Trade Received!'}
             </div>
             <div style="font-size:16px; font-weight:bold; color:var(--parchment);">${incoming.name}</div>
-            <div style="font-size:12px; color:var(--text-muted); margin:4px 0;">
-              Tier ${incoming.tier} • Origin: [${incoming.origin}]
-            </div>
-            <div style="font-size:11px; color:var(--parchment-muted);">
-              Market Appraisal: <strong style="color:var(--gold-primary);">${calculateMantisValue(incoming)} 両</strong>
-            </div>
+            <div style="font-size:12px; color:var(--text-muted); margin:4px 0;">Tier ${incoming.tier} • Origin: [${incoming.origin}]</div>
+            <div style="font-size:11px; color:var(--parchment-muted);">Market Appraisal: <strong style="color:var(--gold-primary);">${calculateMantisValue(incoming)} 両</strong></div>
           </div>
         `;
-
         showToast(isJackpot ? "🌟 JACKPOT! Apex foreign warrior received!" : "Trade completed successfully!", "🎁");
-      }, 2500);
+      }, 2000);
     }
 
-    /* =====================================================================
-       12. DAY TICK, CONDITIONING & LOGISTICS
-       ===================================================================== */
+    /* 11. DAY TICK, CONDITIONING & LOGISTICS */
     function updateLogisticsSummary() {
-      const mantisCount = state.roster.length;
-      document.getElementById('logisticsWages').textContent = (mantisCount * 8).toLocaleString();
-      document.getElementById('logisticsFood').textContent = mantisCount.toString();
+      const count = state.roster.length;
+      document.getElementById('logisticsWages').textContent = (count * 8).toLocaleString();
+      document.getElementById('logisticsFood').textContent = count.toString();
     }
 
     function advanceDayManual() {
@@ -3089,35 +2649,20 @@
     function advanceDay(days = 1) {
       for (let d = 0; d < days; d++) {
         state.day += 1;
-
-        // Daily upkeep
         const wageCost = state.roster.length * 8;
         const foodCost = state.roster.length;
-
         state.gold = Math.max(0, state.gold - wageCost);
 
         if (state.rations >= foodCost) {
           state.rations -= foodCost;
         } else {
-          // Starvation effect
           state.rations = 0;
-          state.roster.forEach(m => {
-            if (Math.random() < 0.25) m.injured = true;
-          });
+          state.roster.forEach(m => { if (Math.random() < 0.25) m.injured = true; });
           showToast("Starvation in Dojo! Rations depleted.", "⚠️");
         }
 
-        // Progress nursery eggs
-        state.nursery.forEach(slot => {
-          if (slot) {
-            slot.progressDays += 1;
-          }
-        });
-
-        // Reduce fatigue for resting mantises
-        state.roster.forEach(m => {
-          m.fatigue = Math.max(0, m.fatigue - 30);
-        });
+        state.nursery.forEach(slot => { if (slot) slot.progressDays += 1; });
+        state.roster.forEach(m => { m.fatigue = Math.max(0, m.fatigue - 30); });
       }
 
       saveState();
@@ -3154,7 +2699,6 @@
         showToast("Mantis is exhausted! Let it rest or apply medicine.", "⚠️");
         return;
       }
-
       m.fatigue += 30;
       if (m.ivs[statKey] < 100) {
         const gain = Math.floor(Math.random() * 4) + 1;
@@ -3163,7 +2707,6 @@
       } else {
         showToast("Stat already at pinnacle SSS+ (100)!", "✨");
       }
-
       saveState();
       renderRoster();
     }
@@ -3173,12 +2716,10 @@
       const id = document.getElementById('trainMantisSelect').value;
       const m = state.roster.find(item => item.id === id);
       if (!m) return;
-
       if (state.meds < 1) {
         showToast("No Molting Chitin Ointment available!", "⚠️");
         return;
       }
-
       state.meds -= 1;
       m.injured = false;
       m.fatigue = 0;
@@ -3188,9 +2729,7 @@
       showToast(`${m.name} was fully healed and invigorated!`, "🍶");
     }
 
-    /* =====================================================================
-       13. ROSTER VAULT RENDERING & WHOLESALE SELLING
-       ===================================================================== */
+    /* 12. ROSTER VAULT RENDERING */
     function populateBreederDropdowns() {
       const sireSelect = document.getElementById('sireSelect');
       const damSelect = document.getElementById('damSelect');
@@ -3217,7 +2756,6 @@
       if (curSire) sireSelect.value = curSire;
       if (curDam) damSelect.value = curDam;
 
-      // Arena & Training selects
       const arenaSel = document.getElementById('arenaFighterSelect');
       const trainSel = document.getElementById('trainMantisSelect');
       arenaSel.innerHTML = "";
@@ -3239,18 +2777,14 @@
     function renderRoster() {
       const grid = document.getElementById('rosterGrid');
       grid.innerHTML = "";
-
       const sortVal = document.getElementById('sortRosterSelect').value;
       const filterTier = document.getElementById('filterTierSelect').value;
 
       let list = [...state.roster];
-
-      // Filtering
       if (filterTier === "1-3") list = list.filter(m => m.tier <= 3);
       else if (filterTier === "4-7") list = list.filter(m => m.tier >= 4 && m.tier <= 7);
       else if (filterTier === "8-10") list = list.filter(m => m.tier >= 8);
 
-      // Sorting
       if (sortVal === "valDesc") list.sort((a,b) => calculateMantisValue(b) - calculateMantisValue(a));
       else if (sortVal === "valAsc") list.sort((a,b) => calculateMantisValue(a) - calculateMantisValue(b));
       else if (sortVal === "tierDesc") list.sort((a,b) => b.tier - a.tier);
@@ -3266,7 +2800,6 @@
         const card = document.createElement('div');
         card.className = "mantis-card" + (m.grail ? " grail" : "");
 
-        // Build tags
         let tagHtml = "";
         if (m.grail) {
           const g = GRAILS.find(item => item.id === m.grail);
@@ -3287,49 +2820,21 @@
 
         card.innerHTML = `
           <div class="card-top">
-            <span class="mantis-name">
-              ${m.name} <span class="sex-symbol ${m.sex === 'M' ? 'male' : 'female'}">${m.sex === 'M' ? '♂' : '♀'}</span>
-            </span>
+            <span class="mantis-name">${m.name} <span class="sex-symbol ${m.sex === 'M' ? 'male' : 'female'}">${m.sex === 'M' ? '♂' : '♀'}</span></span>
             <span class="tier-badge ${m.tier === 10 ? 't10' : ''}">T${m.tier}</span>
           </div>
-
           <div class="card-subline">
             <span>Tier ${m.tier}: ${TIERS[m.tier-1].name}</span>
             <span>Record: ${m.wins}W / ${m.losses}L</span>
           </div>
-
-          <div class="morph-tags">
-            ${tagHtml || '<span class="tag">Wild Carapace</span>'}
-          </div>
-
+          <div class="morph-tags">${tagHtml || '<span class="tag">Wild Carapace</span>'}</div>
           <div class="iv-grid">
-            <div class="iv-item">
-              <span class="iv-label">ATK</span>
-              <span class="iv-grade grade-${getIVGrade(m.ivs.atk)}">${getIVGrade(m.ivs.atk)}</span>
-              <span style="color:#78716c; font-size:8px;">${m.ivs.atk}</span>
-            </div>
-            <div class="iv-item">
-              <span class="iv-label">DEF</span>
-              <span class="iv-grade grade-${getIVGrade(m.ivs.def)}">${getIVGrade(m.ivs.def)}</span>
-              <span style="color:#78716c; font-size:8px;">${m.ivs.def}</span>
-            </div>
-            <div class="iv-item">
-              <span class="iv-label">SPD</span>
-              <span class="iv-grade grade-${getIVGrade(m.ivs.spd)}">${getIVGrade(m.ivs.spd)}</span>
-              <span style="color:#78716c; font-size:8px;">${m.ivs.spd}</span>
-            </div>
-            <div class="iv-item">
-              <span class="iv-label">STA</span>
-              <span class="iv-grade grade-${getIVGrade(m.ivs.sta)}">${getIVGrade(m.ivs.sta)}</span>
-              <span style="color:#78716c; font-size:8px;">${m.ivs.sta}</span>
-            </div>
-            <div class="iv-item">
-              <span class="iv-label">FER</span>
-              <span class="iv-grade grade-${getIVGrade(m.ivs.fer)}">${getIVGrade(m.ivs.fer)}</span>
-              <span style="color:#78716c; font-size:8px;">${m.ivs.fer}</span>
-            </div>
+            <div class="iv-item"><span class="iv-label">ATK</span><span class="iv-grade grade-${getIVGrade(m.ivs.atk)}">${getIVGrade(m.ivs.atk)}</span><span style="color:#78716c; font-size:8px;">${m.ivs.atk}</span></div>
+            <div class="iv-item"><span class="iv-label">DEF</span><span class="iv-grade grade-${getIVGrade(m.ivs.def)}">${getIVGrade(m.ivs.def)}</span><span style="color:#78716c; font-size:8px;">${m.ivs.def}</span></div>
+            <div class="iv-item"><span class="iv-label">SPD</span><span class="iv-grade grade-${getIVGrade(m.ivs.spd)}">${getIVGrade(m.ivs.spd)}</span><span style="color:#78716c; font-size:8px;">${m.ivs.spd}</span></div>
+            <div class="iv-item"><span class="iv-label">STA</span><span class="iv-grade grade-${getIVGrade(m.ivs.sta)}">${getIVGrade(m.ivs.sta)}</span><span style="color:#78716c; font-size:8px;">${m.ivs.sta}</span></div>
+            <div class="iv-item"><span class="iv-label">FER</span><span class="iv-grade grade-${getIVGrade(m.ivs.fer)}">${getIVGrade(m.ivs.fer)}</span><span style="color:#78716c; font-size:8px;">${m.ivs.fer}</span></div>
           </div>
-
           <div class="card-footer">
             <div>
               <div class="card-val mono">${val.toLocaleString()} 両</div>
@@ -3341,7 +2846,6 @@
             </div>
           </div>
         `;
-
         card.onclick = () => openDossier(m.id);
         grid.appendChild(card);
       });
@@ -3354,13 +2858,9 @@
       soundClick();
       const m = state.roster.find(item => item.id === id);
       if (!m) return;
-
-      const val = calculateMantisValue(m);
-      const wholesale = Math.round(val * 0.77);
-
+      const wholesale = Math.round(calculateMantisValue(m) * 0.77);
       state.gold += wholesale;
       state.roster = state.roster.filter(item => item.id !== id);
-
       saveState();
       updateHeaderLedger();
       renderRoster();
@@ -3368,28 +2868,20 @@
       showToast(`Wholesale Sold ${m.name} for ${wholesale.toLocaleString()} 両!`, "💰");
     }
 
-    /* DOSSIER MODAL */
     function openDossier(id) {
       soundClick();
       const m = state.roster.find(item => item.id === id);
       if (!m) return;
-
-      const modal = document.getElementById('dossierModal');
-      const content = document.getElementById('dossierContent');
       const t = TIERS[m.tier - 1] || TIERS[0];
       const val = calculateMantisValue(m);
 
-      content.innerHTML = `
+      document.getElementById('dossierContent').innerHTML = `
         <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;">
           <div>
             <h3 style="color:var(--parchment); font-size:18px;">${m.name}</h3>
-            <div style="font-size:12px; color:var(--text-muted);">
-              Tier ${m.tier}: ${t.name} (${t.role}) • Weapon: ${t.weapon}
-            </div>
+            <div style="font-size:12px; color:var(--text-muted);">Tier ${m.tier}: ${t.name} (${t.role}) • Weapon: ${t.weapon}</div>
           </div>
-          <div class="mono" style="font-size:18px; color:var(--gold-primary); font-weight:bold;">
-            ${val.toLocaleString()} 両
-          </div>
+          <div class="mono" style="font-size:18px; color:var(--gold-primary); font-weight:bold;">${val.toLocaleString()} 両</div>
         </div>
 
         <div style="background:#140f0c; border:1px solid var(--border-wood); border-radius:6px; padding:10px; font-family:monospace; font-size:12px; margin-bottom:12px;">
@@ -3397,7 +2889,7 @@
           <div>Origin: ${m.origin}</div>
           <div>Sex: ${m.sex === 'M' ? 'Male (♂)' : 'Female (♀)'} | Created: Day ${m.createdDay}</div>
           <div style="margin-top:6px; color:var(--gold-accent);">Visual Morphs:</div>
-          <div>${RECESSIVES.map(r => `${r.name}: ${m.recessives[r.key] === 2 ? 'Visual (HOMO)' : (m.recessives[r.key] === 1 ? 'Carrier (HET)' : 'Wild')}`).join(' | ')}</div>
+          <div>${RECESSIVES.map(r => `${r.name}: ${m.recessives[r.key] === 2 ? 'Visual' : (m.recessives[r.key] === 1 ? 'Carrier' : 'Wild')}`).join(' | ')}</div>
           <div style="margin-top:4px; color:#34d399;">Structural Traits:</div>
           <div>${CODOMINANTS.map(c => `${c.name}: ${m.codominants[c.key] === 2 ? 'SUPER' : (m.codominants[c.key] === 1 ? 'Hetero' : 'None')}`).join(' | ')}</div>
         </div>
@@ -3415,8 +2907,7 @@
           <button class="btn btn-gold" onclick="renameMantis('${m.id}')">Rename</button>
         </div>
       `;
-
-      modal.classList.add('open');
+      document.getElementById('dossierModal').classList.add('open');
     }
 
     function renameMantis(id) {
@@ -3437,28 +2928,20 @@
       document.getElementById('dossierModal').classList.remove('open');
     }
 
-    /* =====================================================================
-       14. CODEX RENDERING
-       ===================================================================== */
+    /* 13. CODEX RENDERING */
     function renderCodex() {
       const gGrid = document.getElementById('grailsCodexGrid');
       gGrid.innerHTML = "";
-
       GRAILS.forEach(g => {
         const discovered = state.discoveredGrails[g.id];
         const card = document.createElement('div');
         card.className = "codex-card" + (discovered ? " unlocked" : "");
-
         card.innerHTML = `
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-            <strong style="color:${discovered ? 'var(--gold-primary)' : 'var(--text-muted)'}; font-size:14px;">
-              ${g.title}
-            </strong>
+            <strong style="color:${discovered ? 'var(--gold-primary)' : 'var(--text-muted)'}; font-size:14px;">${g.title}</strong>
             <span class="tag ${discovered ? 'super' : ''}">${g.mult}x Multiplier</span>
           </div>
-          <div style="font-size:11px; color:var(--parchment-muted); margin-bottom:6px;">
-            Required: ${g.req}
-          </div>
+          <div style="font-size:11px; color:var(--parchment-muted); margin-bottom:6px;">Required: ${g.req}</div>
           <p style="font-size:11px; color:var(--text-muted); line-height:1.4;">${g.desc}</p>
           <div style="margin-top:8px; font-size:10px; font-family:monospace; color:${discovered ? '#34d399' : '#78716c'};">
             ${discovered ? `Discovered Day ${discovered.discoveredDay} by [${discovered.specimenName}]` : '🔒 Unregistered in Codex'}
@@ -3469,7 +2952,6 @@
 
       const tGrid = document.getElementById('traitsCodexGrid');
       tGrid.innerHTML = "";
-
       RECESSIVES.forEach(r => {
         const card = document.createElement('div');
         card.className = "codex-card";
@@ -3482,13 +2964,10 @@
       });
     }
 
-    /* =====================================================================
-       15. BACKUP & RESTORE MODAL (JSON EXPORT/IMPORT)
-       ===================================================================== */
+    /* 14. BACKUP & RESTORE MODAL */
     function openBackupModal() {
       soundClick();
-      const area = document.getElementById('backupJsonArea');
-      area.value = JSON.stringify(state, null, 2);
+      document.getElementById('backupJsonArea').value = JSON.stringify(state, null, 2);
       document.getElementById('backupModal').classList.add('open');
     }
 
@@ -3526,9 +3005,7 @@
       }
     }
 
-    /* =====================================================================
-       16. DEV CONSOLE CHEATS
-       ===================================================================== */
+    /* 15. DEV CONSOLE CHEATS */
     function toggleDevConsole() {
       soundClick();
       document.getElementById('devConsole').classList.toggle('open');
@@ -3555,13 +3032,11 @@
       state.wax += w;
       updateHeaderLedger();
       saveState();
-      showToast(`Dev: Added +${f} Food, +${m} Meds, +${w} Wax`, "⚙️");
+      showToast(`Dev: Added Supplies`, "⚙️");
     }
 
     function devInstantMature() {
-      state.nursery.forEach(slot => {
-        if (slot) slot.progressDays = slot.maturationTarget;
-      });
+      state.nursery.forEach(slot => { if (slot) slot.progressDays = slot.maturationTarget; });
       renderNursery();
       saveState();
       showToast("Dev: All nursery oothecae ready to hatch!", "🐣");
@@ -3578,12 +3053,7 @@
     }
 
     function devSpawnGrail() {
-      const grail = createMantis(9, 'M', {
-        melanistic: 2,
-        crimson: 2,
-        spiny: 2,
-        origin: "Astral Shogun Convergence"
-      });
+      const grail = createMantis(9, 'M', { melanistic: 2, crimson: 2, spiny: 2, origin: "Astral Shogun Convergence" });
       grail.name = "The Blood Eclipse Shogun";
       state.roster.unshift(grail);
       saveState();
@@ -3592,9 +3062,7 @@
     }
 
     function devMaxIVs() {
-      state.roster.forEach(m => {
-        m.ivs = { atk: 100, def: 100, spd: 100, sta: 100, fer: 100 };
-      });
+      state.roster.forEach(m => m.ivs = { atk: 100, def: 100, spd: 100, sta: 100, fer: 100 });
       saveState();
       renderRoster();
       showToast("Dev: All roster mantises elevated to SSS+ (100) IVs!", "✨");
@@ -3612,18 +3080,13 @@
       }
     }
 
-    function devAdvanceDay(n) {
-      advanceDay(n);
-    }
-
+    function devAdvanceDay(n) { advanceDay(n); }
     function devHardReset() {
       localStorage.removeItem(STORAGE_KEY);
       location.reload();
     }
 
-    /* =====================================================================
-       17. UI TABS, RESIZE & INITIALIZATION
-       ===================================================================== */
+    /* 16. UI INITIALIZATION */
     function updateHeaderLedger() {
       document.getElementById('resGold').textContent = state.gold.toLocaleString();
       document.getElementById('resFood').textContent = state.rations.toString();
@@ -3644,15 +3107,10 @@
           const target = t.getAttribute('data-tab');
           document.getElementById(target).classList.add('active');
 
-          if (target === "arenaTab") {
-            setupArenaFighter();
-          } else if (target === "tradeTab") {
-            populateTradeDropdown();
-          } else if (target === "auctionTab") {
-            renderAuctions();
-          } else if (target === "clearanceTab") {
-            renderClearance();
-          }
+          if (target === "arenaTab") setupArenaFighter();
+          else if (target === "tradeTab") populateTradeDropdown();
+          else if (target === "auctionTab") renderAuctions();
+          else if (target === "clearanceTab") renderClearance();
         });
       });
     }
@@ -3667,7 +3125,6 @@
       });
     }
 
-    // Window Load Event (Mandatory)
     window.onload = function () {
       loadState();
       initializeAuctions();
@@ -3684,21 +3141,8 @@
       refreshClearanceStock();
       setupArenaFighter();
 
-      // Timers
       setInterval(clearanceTicker, 500);
       setInterval(auctionTicker, 1000);
-
-      // Handle Canvas Responsive Sizing
-      const resizeArena = () => {
-        const wrap = document.querySelector('.arena-canvas-wrap');
-        if (wrap) {
-          arenaCanvas.width = wrap.clientWidth;
-          arenaCanvas.height = wrap.clientHeight;
-          drawArenaFrame();
-        }
-      };
-      window.addEventListener('resize', resizeArena);
-      resizeArena();
     };
   </script>
 </body>
